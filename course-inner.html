@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ctcu - Course</title>
+
+    <link
+      rel="icon"
+      type="image/png"
+      href="/assets/images/favicon/favicon-16x16.png"
+      sizes="16x16"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/assets/images/favicon/favicon-32x32.png"
+      sizes="32x32"
+    />
+    <link rel="shortcut icon" href="/assets/images/favicon/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      href="/assets/images/favicon/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="/assets/images/favicon/site.webmanifest" />
+
+    <link rel="stylesheet" href="./assets/styles/fonts.css" />
+    <link rel="stylesheet" href="./assets/styles/swiper-bundle.min.css" />
+    <!-- <link rel="stylesheet" href="./assets/styles/plyr.css" /> -->
+    <link rel="stylesheet" href="./assets/styles/style.css" />
+    <link rel="stylesheet" href="./assets/styles/glightbox.min.css" />
+    <script src="./assets/js/./swiper-bundle.min.js" defer></script>
+    <!-- <script src="./assets/js/plyr.min.js" defer></script> -->
+    <script src="./assets/js/glightbox.min.js" defer></script>
+    <script src="./assets/js/app.js" defer></script>
+  </head>
+
+  <body data-theme="dark">
+    <div class="whatsapp">
+      <img src="./assets/images/icons/whatsapp.png" alt="whatsapp icon" />
+    </div>
+
+    <header class="header">
+      <div class="header-blur"></div>
+
+      <div class="container header-content">
+        <div class="header-logo">
+          <a href="./index.html">
+            <img src="./assets/images/common/ctc-logo.png" alt="logo" />
+          </a>
+        </div>
+
+        <nav class="header-navigation">
+          <ul>
+            <li>
+              <a href="./courses.html">Courses</a>
+            </li>
+            <li>
+              <a href="">Study Abroad</a>
+            </li>
+            <li>
+              <a href="./news.html">News</a>
+            </li>
+            <li>
+              <a href="./instructors.html">Instructors</a>
+            </li>
+            <li>
+              <a href="./about.html">About</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="header-cta">
+          <a href="" class="header-cart-btn">
+            <img src="./assets/images/icons/Cart.png" alt="cart icon" />
+            <!-- <span>1</span> -->
+          </a>
+
+          <div class="header-profile">
+            <button class="header-profile-btn">
+              <img src="./assets/images/icons/Profile.png" alt="profile" />
+            </button>
+
+            <div class="header-profile-dropdown">
+              <ul class="header-profile-dropdown-list">
+                <li class="header-profile-dropdown-list-item active">
+                  <a href="">My Courses</a>
+                </li>
+                <li class="header-profile-dropdown-list-item">
+                  <a href="">My Wishlist</a>
+                </li>
+                <li class="header-profile-dropdown-list-item">
+                  <a href="">My Events</a>
+                </li>
+                <li class="header-profile-dropdown-list-item">
+                  <a href="">Settings</a>
+                </li>
+                <li class="header-profile-dropdown-list-item">
+                  <a href="">Log Out</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="theme-toggle abc">
+            <label class="toggle-label">
+              <input
+                type="checkbox"
+                id="theme-input"
+                class="toggle-input"
+                checked
+              />
+
+              <div class="theme-toggle-icons">
+                <div class="sun-icons">
+                  <img
+                    src="./assets/images/icons/sun-filled.png"
+                    alt="sun icon"
+                    class="sun-filled-icon"
+                  />
+                  <img
+                    src="./assets/images/icons/sun.png"
+                    alt="sun icon"
+                    class="sun-icon"
+                  />
+                </div>
+
+                <div class="moon-icons">
+                  <img
+                    src="./assets/images/icons/moon-filled.png"
+                    alt="moon icon"
+                    class="moon-filled-icon"
+                  />
+                  <img
+                    src="./assets/images/icons/moon.png"
+                    alt="moon icon"
+                    class="moon-icon"
+                  />
+                </div>
+              </div>
+            </label>
+          </div>
+
+          <div class="menu-button">
+            <div class="menu-button-line"></div>
+            <div class="menu-button-line"></div>
+            <div class="menu-button-line"></div>
+          </div>
+        </div>
+
+        <div class="mobile-menu">
+          <div class="mobile-menu-blur">
+            <div class="mobile-menu-header">
+              <div class="header-logo">
+                <img src="./assets/images/common/ctc-logo.png" alt="logo" />
+              </div>
+
+              <div class="mobile-menu-header-cta">
+                <a href="" class="header-cart-btn">
+                  <img src="./assets/images/icons/Cart.png" alt="cart icon" />
+                  <!-- <span>1</span> -->
+                </a>
+                <button class="mobile-menu-close-btn">
+                  <img src="./assets/images/icons/Cross.png" alt="cross icon" />
+                </button>
+              </div>
+            </div>
+
+            <nav class="header-navigation">
+              <ul class="header-navigation-list">
+                <li>
+                  <div class="mobile-menu-profile-wrapper">
+                    <!-- mobile-menu-profile-title-wrapper ამ კლასს უნდა დაემატოს active რომ გაფერადდეს პროფილის გვერდზე -->
+                    <div class="mobile-menu-profile-title-wrapper">
+                      <p class="mobile-menu-profile-title">My Profile</p>
+
+                      <img
+                        src="./assets/images/icons/chevron-down.png"
+                        alt="chevron"
+                      />
+                    </div>
+
+                    <ul class="mobile-menu-profile-list">
+                      <li>
+                        <a href="">My Courses</a>
+                      </li>
+                      <li>
+                        <a href="">My Wishlist</a>
+                      </li>
+                      <li>
+                        <a href="">My Events</a>
+                      </li>
+                      <li>
+                        <a href="">Settings</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+
+                <!-- li-ს უნდა დაემატოს active კლასი, ფერის შესაცვლელად შესაბამის გვერდზე -->
+                <li class="header-navigation-list-item">
+                  <a href="">Courses</a>
+                </li>
+                <li class="header-navigation-list-item">
+                  <a href="">Study Abroad</a>
+                </li>
+                <li class="header-navigation-list-item">
+                  <a href="">News</a>
+                </li>
+                <li class="header-navigation-list-item">
+                  <a href="">Instructors</a>
+                </li>
+                <li class="header-navigation-list-item">
+                  <a href="">About</a>
+                </li>
+              </ul>
+            </nav>
+
+            <div class="theme-toggle mobile-theme-toggle">
+              <label class="toggle-label">
+                <input
+                  type="checkbox"
+                  name="theme-btn"
+                  class="toggle-input"
+                  checked
+                />
+                <!-- <span class="toggle-slider"> </span> -->
+
+                <div class="theme-toggle-icons">
+                  <div class="sun-icons">
+                    <img
+                      src="./assets/images/icons/sun-filled.png"
+                      alt="sun icon"
+                      class="sun-filled-icon"
+                    />
+                    <img
+                      src="./assets/images/icons/sun.png"
+                      alt="sun icon"
+                      class="sun-icon"
+                    />
+                  </div>
+
+                  <div class="moon-icons">
+                    <img
+                      src="./assets/images/icons/moon-filled.png"
+                      alt="moon icon"
+                      class="moon-filled-icon"
+                    />
+                    <img
+                      src="./assets/images/icons/moon.png"
+                      alt="moon icon"
+                      class="moon-icon"
+                    />
+                  </div>
+                </div>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="course-inner-page-section">
+        <div class="container">
+          <a href="./courses.html" class="back-btn">
+            <img src="./assets/images/icons/arrow-left.png" alt="left arrow" />
+            <span>Back</span>
+          </a>
+        </div>
+
+        <div class="container course-details-container">
+          <div class="course-details-wrapper">
+            <h1>Business Environment in Georgia</h1>
+            <div class="course-video">
+              <div class="play-icon">
+                <img
+                  src="./assets/images/icons/play.svg"
+                  alt="play"
+                  class="play-icon-img"
+                />
+              </div>
+
+              <a
+                href="https://www.youtube.com/embed/bTqVqk7FSmY?vq=1440p"
+                class="glightbox course-video-link"
+                data-type="video"
+              >
+                <img
+                  src="./assets/images/course/video-thumbnail.png"
+                  alt="office"
+                  class="course-video-thumbnail"
+                />
+              </a>
+            </div>
+
+            <div class="course-information-list">
+              <div class="course-information-list-item">
+                <img
+                  src="./assets/images/icons/video-camera.png"
+                  alt="camera"
+                />
+                <h4>Delivery Mode</h4>
+                <p>Live Online Training</p>
+              </div>
+
+              <div class="course-information-list-item">
+                <img src="./assets/images/icons/clock-white.png" alt="clock" />
+                <h4>Duration</h4>
+                <p>2 Days</p>
+              </div>
+
+              <div class="course-information-list-item">
+                <img
+                  src="./assets/images/icons/certificate.png"
+                  alt="certificate"
+                />
+                <h4>Certificate</h4>
+                <p>AXELOS Accredited</p>
+              </div>
+
+              <div class="course-information-list-item">
+                <img src="./assets/images/icons/lang.png" alt="language" />
+                <h4>Language</h4>
+                <p>English</p>
+              </div>
+
+              <div class="course-information-list-item">
+                <img src="./assets/images/icons/calendar.png" alt="calendar" />
+                <h4>Start Date</h4>
+                <p>Nov 01, 2025</p>
+              </div>
+            </div>
+
+            <div class="course-page-description">
+              <h2>Description</h2>
+              <p class="course-page-description-text">
+                Lorem ipsum dolor sit amet consectetur. Id tristique quam
+                viverra commodo morbi nam tristique. Pulvinar quisque hendrerit
+                imperdiet rhoncus. Consectetur leo dui bibendum ut nec. Varius
+                sed nunc donec mauris dui. Ultricies integer odio fames dui duis
+                pulvinar in.
+              </p>
+
+              <p class="course-page-description-text">
+                Posuere imperdiet imperdiet aenean viverra sed eleifend donec
+                magna. Nisi pretium in luctus eleifend consequat leo felis quis
+                neque.
+              </p>
+
+              <div class="course-page-description-marked-text">
+                <p class="course-page-description-text">
+                  Lorem ipsum dolor sit amet consectetur. Id tristique quam
+                  viverra commodo morbi nam tristique. Pulvinar quisque
+                  hendrerit imperdiet rhoncus. Consectetur leo dui bibendum ut
+                  nec. Varius sed nunc donec mauris dui. Ultricies integer odio
+                  fames dui duis pulvinar in.
+                </p>
+              </div>
+
+              <p class="course-page-description-text">
+                Lorem ipsum dolor sit amet consectetur. Id tristique quam
+                viverra commodo morbi nam tristique. Pulvinar quisque hendrerit
+                imperdiet rhoncus. Consectetur leo dui bibendum ut nec. Varius
+                sed nunc donec mauris dui. Ultricies integer odio fames dui duis
+                pulvinar in. <br />
+                Posuere imperdiet imperdiet aenean viverra sed eleifend donec
+                magna. Nisi pretium in luctus eleifend consequat leo felis quis
+                neque. A velit quis euismod sociis vestibulum. Vitae ultricies
+                elementum quam etiam velit diam neque. Lobortis sed id
+                ullamcorper ipsum. Accumsan vel nulla sed scelerisque blandit.
+              </p>
+            </div>
+
+            <div class="syllabus-accordion-block">
+              <h2>Syllabus</h2>
+
+              <div class="accordion">
+                <div class="accordion-item">
+                  <div class="accordion-button">
+                    <span>1. Lorem ipsum dolor sit amet consectetur</span>
+
+                    <div class="accordion-chevron">
+                      <img
+                        src="./assets/images/icons/chevron-down-2.png"
+                        alt="chevron"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="accordion-content">
+                    <div class="accordion-content-texts">
+                      <ul>
+                        <li>Lorem ipsum dolor sit amet consectetur.</li>
+                        <li>Imperdiet commodo nulla eget faucibus tortor.</li>
+                        <li>
+                          Ut amet molestie semper velit. Semper sed pharetra
+                          porttitor mi.
+                        </li>
+                        <li>
+                          Non dui tortor magna dolor aliquet sit aenean sit
+                          rhoncus.
+                        </li>
+                        <li>Purus volutpat amet a duis dui ipsum.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <div class="accordion-button">
+                    <span>2. Lorem ipsum dolor sit amet consectetur</span>
+
+                    <div class="accordion-chevron">
+                      <img
+                        src="./assets/images/icons/chevron-down-2.png"
+                        alt="chevron"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="accordion-content">
+                    <div class="accordion-content-texts">
+                      <ul>
+                        <li>Lorem ipsum dolor sit amet consectetur.</li>
+                        <li>Imperdiet commodo nulla eget faucibus tortor.</li>
+                        <li>
+                          Ut amet molestie semper velit. Semper sed pharetra
+                          porttitor mi.
+                        </li>
+                        <li>
+                          Non dui tortor magna dolor aliquet sit aenean sit
+                          rhoncus.
+                        </li>
+                        <li>Purus volutpat amet a duis dui ipsum.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <div class="accordion-button">
+                    <span>3. Lorem ipsum dolor sit amet consectetur</span>
+
+                    <div class="accordion-chevron">
+                      <img
+                        src="./assets/images/icons/chevron-down-2.png"
+                        alt="chevron"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="accordion-content">
+                    <div class="accordion-content-texts">
+                      <ul>
+                        <li>Lorem ipsum dolor sit amet consectetur.</li>
+                        <li>Imperdiet commodo nulla eget faucibus tortor.</li>
+                        <li>
+                          Ut amet molestie semper velit. Semper sed pharetra
+                          porttitor mi.
+                        </li>
+                        <li>
+                          Non dui tortor magna dolor aliquet sit aenean sit
+                          rhoncus.
+                        </li>
+                        <li>Purus volutpat amet a duis dui ipsum.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <div class="accordion-button">
+                    <span>4. Lorem ipsum dolor sit amet consectetur</span>
+
+                    <div class="accordion-chevron">
+                      <img
+                        src="./assets/images/icons/chevron-down-2.png"
+                        alt="chevron"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="accordion-content">
+                    <div class="accordion-content-texts">
+                      <ul>
+                        <li>Lorem ipsum dolor sit amet consectetur.</li>
+                        <li>Imperdiet commodo nulla eget faucibus tortor.</li>
+                        <li>
+                          Ut amet molestie semper velit. Semper sed pharetra
+                          porttitor mi.
+                        </li>
+                        <li>
+                          Non dui tortor magna dolor aliquet sit aenean sit
+                          rhoncus.
+                        </li>
+                        <li>Purus volutpat amet a duis dui ipsum.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <div class="accordion-button">
+                    <span>5. Lorem ipsum dolor sit amet consectetur</span>
+
+                    <div class="accordion-chevron">
+                      <img
+                        src="./assets/images/icons/chevron-down-2.png"
+                        alt="chevron"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="accordion-content">
+                    <div class="accordion-content-texts">
+                      <ul>
+                        <li>Lorem ipsum dolor sit amet consectetur.</li>
+                        <li>Imperdiet commodo nulla eget faucibus tortor.</li>
+                        <li>
+                          Ut amet molestie semper velit. Semper sed pharetra
+                          porttitor mi.
+                        </li>
+                        <li>
+                          Non dui tortor magna dolor aliquet sit aenean sit
+                          rhoncus.
+                        </li>
+                        <li>Purus volutpat amet a duis dui ipsum.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="course-page-instructors">
+              <h2>Instructors</h2>
+
+              <div class="container top-instructors-list">
+                <div class="top-instructor-card">
+                  <img
+                    src="./assets/images/home/instructor-1.png"
+                    alt="instructor"
+                    class="top-instructor-img"
+                  />
+                  <div class="top-instructor-texts">
+                    <h3 class="top-instructor-name">Boris (Buba) Lezhava</h3>
+                    <p class="top-instructor-title">Professor in Marketing</p>
+                  </div>
+                </div>
+
+                <div class="top-instructor-card">
+                  <img
+                    src="./assets/images/home/instructor-2.png"
+                    alt="instructor"
+                    class="top-instructor-img"
+                  />
+                  <div class="top-instructor-texts">
+                    <h3 class="top-instructor-name">Zaza Javelidze</h3>
+                    <p class="top-instructor-title">Founder of Syntax Group</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="course-page-collaboration">
+              <h2>Collaboration</h2>
+
+              <div class="collaboration-list">
+                <div class="collaboration-list-item">
+                  <img
+                    src="./assets/images/logos/logo-1.png"
+                    alt="company logo"
+                  />
+
+                  <h4>Company Name</h4>
+                </div>
+
+                <div class="collaboration-list-item">
+                  <img
+                    src="./assets/images/logos/logo-2.png"
+                    alt="company logo"
+                  />
+
+                  <h4>Company Name</h4>
+                </div>
+
+                <div class="collaboration-list-item">
+                  <img
+                    src="./assets/images/logos/logo-3.png"
+                    alt="company logo"
+                  />
+
+                  <h4>Company Name</h4>
+                </div>
+
+                <div class="collaboration-list-item">
+                  <img
+                    src="./assets/images/logos/logo-4.png"
+                    alt="company logo"
+                  />
+
+                  <h4>Company Name</h4>
+                </div>
+
+                <div class="collaboration-list-item">
+                  <img
+                    src="./assets/images/logos/logo-5.png"
+                    alt="company logo"
+                  />
+
+                  <h4>Company Name</h4>
+                </div>
+
+                <div class="collaboration-list-item">
+                  <img
+                    src="./assets/images/logos/logo-6.png"
+                    alt="company logo"
+                  />
+
+                  <h4>Company Name</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="course-actions-block-wrapper">
+            <div class="sponsored-company gradient-gray-border">
+              <p class="sponsored-by-text">Sponsored By</p>
+
+              <img src="./assets/images/logos/logo-2.png" alt="" />
+
+              <h4>Company Name</h4>
+            </div>
+
+            <div class="course-actions-block-sticky">
+              <div class="course-actions-block">
+                <h3 class="course-actions-title">Course Price</h3>
+                <p class="course-actions-description">
+                  Choose from Basic, Bronze, Silver or Gold plans
+                  <span>Click Add to cart</span> or scroll down
+                </p>
+
+                <p class="course-actions-price-range-title">Price range</p>
+                <p class="course-actions-price-range">25.99د.إ - 55.99د.إ</p>
+
+                <button class="course-actions-wishlist-btn">
+                  <span>Add to Wishlist</span>
+                  <img src="./assets/images/icons/heart.svg" alt="heart" />
+                </button>
+                <button class="course-actions-cart-btn">
+                  <span>Add to Cart</span>
+                  <img src="./assets/images/icons/cart-white.png" alt="cart" />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-content-wrapper">
+        <div class="footer-content-top">
+          <div class="footer-logo">
+            <img src="./assets/images/common/ctc-logo.png" alt="logo" />
+
+            <p class="footer-description">
+              Lorem ipsum dolor sit amet consectetur. Molestie ipsum in quis ut
+              eu lacus leo volutpat risus. Metus auctor
+            </p>
+
+            <div class="footer-socials">
+              <a href="">
+                <img src="./assets/images/icons/linkedin.png" alt="linkedin" />
+              </a>
+              <a href="">
+                <img src="./assets/images/icons/xcom.png" alt="x.com" />
+              </a>
+              <a href="">
+                <img
+                  src="./assets/images/icons/instagram.png"
+                  alt="instagram"
+                />
+              </a>
+              <a href="">
+                <img src="./assets/images/icons/facebook.png" alt="facebook" />
+              </a>
+            </div>
+          </div>
+
+          <div class="footer-course-categories footer-nav">
+            <div class="footer-course-categories-heading footer-dropdown">
+              <h3>Course Categories</h3>
+
+              <img src="./assets/images/icons/chevron-down.png" alt="chevron" />
+            </div>
+
+            <ul class="footer-links-list footer-dropdown-content">
+              <li><a href="">Business</a></li>
+              <li><a href="">Digital Marketing</a></li>
+              <li><a href="">Web Development</a></li>
+              <li><a href="">Cloud Computing</a></li>
+              <li><a href="">Artificial Intelligence</a></li>
+              <li><a href="">Cybersecurity</a></li>
+            </ul>
+          </div>
+
+          <div class="discover-more-links footer-nav">
+            <div class="footer-discover-heading footer-dropdown">
+              <h3>Discover</h3>
+
+              <img src="./assets/images/icons/chevron-down.png" alt="chevron" />
+            </div>
+
+            <div class="footer-discover-links-wrapper footer-dropdown-content">
+              <ul class="footer-links-list">
+                <li><a href="">Study Abroad</a></li>
+                <li><a href="">Courses</a></li>
+                <li><a href="">Events</a></li>
+                <li><a href="">News</a></li>
+                <li><a href="">Support</a></li>
+                <li><a href="">About</a></li>
+              </ul>
+              <ul class="footer-links-list">
+                <li><a href="">Instructors</a></li>
+                <li><a href="">Sign up</a></li>
+                <li><a href="">Log in</a></li>
+                <li><a href="">Cart</a></li>
+                <li><a href="">Wishlist</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="footer-support">
+            <div class="footer-support-content">
+              <h3>Support</h3>
+              <p>You can text us via Whatsapp chat or visit</p>
+              <a href="">Help Center</a>
+            </div>
+
+            <div class="theme-toggle">
+              <label class="toggle-label">
+                <input type="checkbox" class="toggle-input" checked />
+                <!-- <span class="toggle-slider"> </span> -->
+
+                <div class="theme-toggle-icons">
+                  <div class="sun-icons">
+                    <img
+                      src="./assets/images/icons/sun-filled.png"
+                      alt="sun icon"
+                      class="sun-filled-icon"
+                    />
+                    <img
+                      src="./assets/images/icons/sun.png"
+                      alt="sun icon"
+                      class="sun-icon"
+                    />
+                  </div>
+
+                  <div class="moon-icons">
+                    <img
+                      src="./assets/images/icons/moon-filled.png"
+                      alt="moon icon"
+                      class="moon-filled-icon"
+                    />
+                    <img
+                      src="./assets/images/icons/moon.png"
+                      alt="moon icon"
+                      class="moon-icon"
+                    />
+                  </div>
+                </div>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-content-bottom">
+          <p class="footer-copyright">
+            <span>2025</span> CTC. All rights reserved.
+          </p>
+
+          <div class="footer-bottom-links">
+            <a href="">Privacy Policy</a>
+            <a href="">Terms and Conditions</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,394 @@
+// !Swiper inits
+const handleAllSwiperInit = () => {
+  const swiperConfigs = {
+    heroSwiper: {
+      // grabCursor: true,
+      slidesPerView: "auto",
+      spaceBetween: 10,
+      centeredSlides: true,
+      watchSlidesProgress: true,
+      speed: 700,
+      navigation: {
+        nextEl: ".hero-swiper-button-next",
+        prevEl: ".hero-swiper-button-prev",
+      },
+      breakpoints: {
+        768: {
+          spaceBetween: 20,
+        },
+      },
+    },
+    coursesSwiper: {
+      // grabCursor: true,
+      slidesPerView: "auto",
+      spaceBetween: 24,
+      watchSlidesProgress: true,
+      centeredSlides: true,
+      slideToClickedSlide: true,
+      speed: 700,
+      navigation: {
+        nextEl: ".courses-swiper-button-next",
+        prevEl: ".courses-swiper-button-prev",
+      },
+      scrollbar: {
+        el: ".swiper-scrollbar",
+        draggable: true,
+        dragSize: 49,
+      },
+      breakpoints: {
+        768: {
+          spaceBetween: 40,
+          scrollbar: {
+            dragSize: 148,
+          },
+        },
+      },
+      on: {
+        init: (swiper) => {
+          swiper.wrapperEl.style.width = `${swiper.wrapperEl.scrollWidth}px`;
+        },
+        slideChange: (swiper) => {
+          // swiper.wrapperEl.style.width = `${swiper.wrapperEl.scrollWidth}px`;
+
+          if (window.innerWidth >= 1024) {
+            swiper.wrapperEl.style.marginLeft = "20px";
+            if (swiper.activeIndex > 1) {
+              swiper.wrapperEl.style.marginLeft = "68px";
+            }
+            if (swiper.activeIndex === 0) {
+              swiper.wrapperEl.style.marginLeft = "0";
+            }
+          } else {
+            swiper.wrapperEl.style.marginLeft = "0";
+          }
+        },
+      },
+    },
+  };
+
+  for (swiperId in swiperConfigs) {
+    // if (swiperConfigs.hasOwnProperty(swiperId)) {
+    const swiperElement = document.getElementById(swiperId);
+    const config = swiperConfigs[swiperId];
+
+    if (swiperElement) {
+      if (swiperElement.id === "coursesSwiper") {
+        // We need this code to update swiper after the entire swiper ends transition to calculate overall width correctly. Without update on 'transitionend' swiper takes incorrect widths for the active and all the rest slides which widths should be different compared to non-active ones. Because in CSS we have added transition for the width changes for each slide and swiper takes those width sizes before the transition is ended, and we are getting 'Race Condition'.
+        const coursesSwiper = new Swiper(swiperElement, config);
+        let swiperInitialized = false;
+
+        swiperElement.addEventListener("transitionend", () => {
+          if (!swiperInitialized) {
+            coursesSwiper.update();
+            swiperInitialized = true;
+          }
+        });
+
+        // window.addEventListener("resize", () => {
+        //   coursesSwiper.update();
+        // });
+      } else {
+        new Swiper(swiperElement, config);
+      }
+    }
+    // }
+  }
+};
+handleAllSwiperInit();
+
+// !Mobile Menu
+const handleMobileMenuBtn = () => {
+  const headerContent = document.querySelector(".header-content");
+  const menuBtn = document.querySelector(".menu-button");
+  const mobileMenuCloseBtn = document.querySelector(".mobile-menu-close-btn");
+
+  menuBtn?.addEventListener("click", (e) => {
+    menuBtn.classList.add("open");
+    headerContent?.classList.toggle("mobile-menu-open");
+    document.body.classList.toggle("prevent-scroll");
+  });
+
+  mobileMenuCloseBtn?.addEventListener("click", (e) => {
+    menuBtn.classList.remove("open");
+    headerContent?.classList.toggle("mobile-menu-open");
+    document.body.classList.toggle("prevent-scroll");
+  });
+};
+handleMobileMenuBtn();
+
+const handleMobileProfileDropdown = () => {
+  const profileDropdown = document.querySelector(
+    ".mobile-menu-profile-wrapper"
+  );
+  const profileDropdownContent = profileDropdown.querySelector(
+    ".mobile-menu-profile-list"
+  );
+  const chevron = document.querySelector(
+    ".mobile-menu-profile-title-wrapper img"
+  );
+
+  profileDropdown?.addEventListener("click", (e) => {
+    profileDropdown.classList.toggle("open");
+    profileDropdownContent.style.height =
+      profileDropdownContent.scrollHeight + "px";
+    chevron.style.transform = "rotate(180deg)";
+
+    if (!profileDropdown.classList.contains("open")) {
+      profileDropdownContent.style.height = "0px";
+      chevron.style.transform = "rotate(0deg)";
+    }
+  });
+};
+handleMobileProfileDropdown();
+
+// !Footer Dropdowns
+const handleFooterDropdowns = () => {
+  const footerDropdowns = document.querySelectorAll(".footer-dropdown");
+  // const footerDropdownContents = document.querySelectorAll(".footer-dropdown-content");
+
+  if (footerDropdowns.length > 0) {
+    footerDropdowns.forEach((dropdown) => {
+      dropdown.addEventListener("click", () => {
+        const chevronIcon = dropdown.querySelector("img");
+        const dropdownContent = dropdown
+          .closest(".footer-nav")
+          .querySelector(".footer-dropdown-content");
+
+        chevronIcon.classList.toggle("rotate-180");
+
+        dropdown.classList.toggle("open");
+        dropdown.classList.toggle("mb-20");
+
+        dropdownContent &&
+          (dropdownContent.style.height = dropdownContent.scrollHeight + "px");
+
+        if (!dropdown.classList.contains("open")) {
+          dropdownContent && (dropdownContent.style.height = "0px");
+        }
+      });
+    });
+  }
+};
+handleFooterDropdowns();
+
+// !Theme switcher
+function switchTheme() {
+  const body = document.body;
+  const themeToggles = document.querySelectorAll(".theme-toggle input");
+
+  const savedTheme = localStorage.getItem("ctcu-theme") || "dark";
+  applyTheme(savedTheme);
+
+  syncToggleInputs();
+
+  themeToggles.forEach((input) => {
+    input.addEventListener("change", () => {
+      const newTheme = input.checked ? "dark" : "light";
+      applyTheme(newTheme);
+      syncToggleInputs();
+    });
+  });
+
+  function applyTheme(theme) {
+    body.setAttribute("data-theme", theme);
+    localStorage.setItem("ctcu-theme", theme);
+  }
+
+  function syncToggleInputs() {
+    const currentTheme = localStorage.getItem("ctcu-theme");
+    themeToggles.forEach((input) => {
+      input.checked = currentTheme === "dark";
+    });
+  }
+}
+switchTheme();
+
+// !Accordion
+const items = document.querySelectorAll(".accordion-item");
+items?.forEach((item) => {
+  const button = item.querySelector(".accordion-button");
+  const chevron = item.querySelector(".accordion-chevron");
+  const chevronImg = item.querySelector(".accordion-chevron img");
+  const content = item.querySelector(".accordion-content");
+
+  button?.addEventListener("click", () => {
+    const isOpen = item.classList.toggle("open");
+    content.style.height = isOpen ? content.scrollHeight + "px" : "0";
+    chevronImg.style.transform = isOpen ? "rotate(180deg)" : "rotate(0deg)";
+  });
+});
+
+// ! Video Player
+// const player = new Plyr("#player", {
+//   quality: {
+//     default: 1440,
+//     options: [4320, 2880, 2160, 1440, 1080],
+//   },
+// });
+
+const lightbox = GLightbox();
+
+// !Registration Form Validation
+const validationRules = {
+  name: {
+    required: true,
+    regex: /^[a-zA-Z]{2,}$/,
+    message: "Please enter your name (letters only, min 2 chars)",
+  },
+  lastname: {
+    required: true,
+    regex: /^[a-zA-Z]*$/,
+    message: "Lastname must contain only letters",
+  },
+  phone: {
+    required: true,
+    regex: /^\+?\d{1,4}[-.\s]?\(?\d{1,4}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,9}$/,
+    message: "Please enter a valid phone number",
+  },
+  email: {
+    required: true,
+    regex: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+    message: "Please enter a valid email address",
+  },
+  password: {
+    required: true,
+    regex: /^(?=.*[A-Z])(?=.*\d).{8,}$/,
+    message: "Password must be min 8 chars, 1 uppercase, 1 number",
+  },
+  repeatPassword: {
+    required: true,
+    match: "password", // special rule
+    message: "Passwords do not match",
+  },
+  newPassword: {
+    required: true,
+    regex: /^(?=.*[A-Z])(?=.*\d).{8,}$/,
+    message: "Password must be min 8 chars, 1 uppercase, 1 number",
+  },
+  repeatNewPassword: {
+    required: true,
+    match: "newPassword", // special rule
+    message: "Passwords do not match",
+  },
+  terms: {
+    required: true,
+    type: "checkbox",
+    message: "You must accept the terms",
+  },
+};
+
+function validateField(field, rules, formEl) {
+  const value = field.type === "checkbox" ? field.checked : field.value.trim();
+
+  // required
+  if (rules.required && !value) return rules.message;
+
+  // regex
+  if (rules.regex && value && !rules.regex.test(value)) return rules.message;
+
+  // match for repeatPassword
+  if (rules.match) {
+    const matchField = formEl.querySelector(`#${rules.match}`);
+    if (matchField && value !== matchField.value.trim()) return rules.message;
+  }
+
+  return ""; // no error
+}
+
+function showError(field, message) {
+  const formGroup = field.closest(".form-group");
+  const errorText = formGroup.querySelector(".form-error-text");
+  if (message) {
+    formGroup.classList.add("form-group-error");
+    errorText.textContent = message;
+    // errorText.style.display = "block";
+    // field.classList.add("invalid");
+  } else {
+    formGroup.classList.remove("form-group-error");
+    // errorText.style.display = "none";
+    // field.classList.remove("invalid");
+  }
+}
+
+function validateForm(formEl) {
+  let isValid = true;
+  Object.keys(validationRules).forEach((name) => {
+    const field = formEl.querySelector(`[name=${name}]`);
+    if (!field) return;
+
+    const message = validateField(field, validationRules[name], formEl);
+    showError(field, message);
+    if (message) isValid = false;
+  });
+  return isValid;
+}
+
+// ********** Registration form submit *********
+const validateRegistrationForm = () => {
+  const registrationForm = document.querySelector(".registration-form");
+
+  if (registrationForm) {
+    // Validate on blur
+    Object.keys(validationRules).forEach((name) => {
+      const field = registrationForm.querySelector(`[name=${name}]`);
+      if (!field) return;
+
+      field.addEventListener("blur", () => {
+        const message = validateField(
+          field,
+          validationRules[name],
+          registrationForm
+        );
+        showError(field, message);
+      });
+    });
+
+    registrationForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      const isFormValid = validateForm(registrationForm);
+      if (isFormValid) {
+        console.log("Form is valid and ready to submit!");
+        registrationForm.submit();
+      } else {
+        console.log("Form is invalid. Please fix the errors and try again.");
+      }
+    });
+  }
+};
+validateRegistrationForm();
+
+// ********** Password Recovery form submit *********
+const validatePasswordRecoveryForm = () => {
+  const recoveryForm = document.querySelector(".recovery-password-form");
+
+  if (recoveryForm) {
+    // Validate on blur
+    Object.keys(validationRules).forEach((name) => {
+      const field = recoveryForm.querySelector(`[name=${name}]`);
+      if (!field) return;
+
+      field.addEventListener("blur", () => {
+        const message = validateField(
+          field,
+          validationRules[name],
+          recoveryForm
+        );
+        showError(field, message);
+      });
+    });
+
+    recoveryForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      const isFormValid = validateForm(recoveryForm);
+      if (isFormValid) {
+        console.log("Form is valid and ready to submit!");
+        registrationForm.submit();
+      } else {
+        console.log("Form is invalid. Please fix the errors and try again.");
+      }
+    });
+  }
+};
+validatePasswordRecoveryForm();
