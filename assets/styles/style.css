@@ -300,7 +300,7 @@ ul {
   visibility: hidden;
   pointer-events: none;
   width: 168px;
-  height: 230px;
+  /* height: 230px; */
   position: absolute;
   top: calc(100% + 22px);
   right: 0;
