@@ -64,6 +64,26 @@ const handleAllSwiperInit = () => {
         },
       },
     },
+    mayLikeSwiper: {
+      slidesPerView: "auto",
+      spaceBetween: 20,
+      centeredSlides: true,
+      speed: 700,
+      navigation: {
+        nextEl: ".may-like-swiper-button-next",
+        prevEl: ".may-like-swiper-button-prev",
+      },
+      scrollbar: {
+        el: ".swiper-scrollbar",
+        draggable: true,
+        dragSize: 49,
+      },
+      breakpoints: {
+        768: {
+          spaceBetween: 40,
+        },
+      },
+    },
   };
 
   for (swiperId in swiperConfigs) {

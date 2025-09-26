@@ -704,9 +704,10 @@
 
           <div class="course-plan-list">
             <div class="course-plan-list-item">
-              <label for="basic-plan">
+              <input type="radio" name="course-plan" id="basic-plan" />
+              <label for="basic-plan" class="basic-plan-label">
                 <div class="course-plan-title">
-                  <input type="radio" name="course-plan" id="basic-plan" />
+                  <div class="custom-radio"></div>
                   <p>Basic</p>
                 </div>
 
@@ -730,10 +731,10 @@
             </div>
 
             <div class="course-plan-list-item">
-              <label for="gold-plan">
+              <input type="radio" name="course-plan" id="gold-plan" checked />
+              <label for="gold-plan" class="golden-plan-label">
                 <div class="course-plan-title">
-                  <input type="radio" name="course-plan" id="gold-plan" />
-
+                  <div class="custom-radio"></div>
                   <div class="course-plan-title-text">
                     <p>Gold (online)</p>
 
@@ -761,9 +762,10 @@
             </div>
 
             <div class="course-plan-list-item">
-              <label for="silver-plan">
+              <input type="radio" name="course-plan" id="silver-plan" />
+              <label for="silver-plan" class="silver-plan-label">
                 <div class="course-plan-title">
-                  <input type="radio" name="course-plan" id="silver-plan" />
+                  <div class="custom-radio"></div>
                   <p>Silver</p>
                 </div>
 
@@ -787,9 +789,10 @@
             </div>
 
             <div class="course-plan-list-item">
-              <label for="bronze-plan">
+              <input type="radio" name="course-plan" id="bronze-plan" />
+              <label for="bronze-plan" class="bronze-plan-label">
                 <div class="course-plan-title">
-                  <input type="radio" name="course-plan" id="bronze-plan" />
+                  <div class="custom-radio"></div>
                   <p>Bronze (online)</p>
                 </div>
 
@@ -813,6 +816,353 @@
             </div>
           </div>
         </form>
+      </section>
+
+      <section class="may-also-like-section">
+        <h2>You may also like</h2>
+
+        <div class="container may-also-like-swiper-wrapper">
+          <div class="swiper" id="mayLikeSwiper">
+            <div class="swiper-wrapper">
+              <a href="./course-inner.html" class="swiper-slide">
+                <div class="may-like-slide">
+                  <div class="may-like-slide-img">
+                    <img
+                      src="./assets/images/home/courses-slider-2.png"
+                      alt=""
+                    />
+
+                    <div class="may-like-course-logos">
+                      <div class="may-like-course-logo-img">
+                        <img
+                          src="./assets/images/logos/logo-1.png"
+                          alt="logo"
+                        />
+                      </div>
+                      <div class="may-like-course-logo-img">
+                        <img
+                          src="./assets/images/logos/logo-2.png"
+                          alt="logo"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="may-like-course-info">
+                      <div class="may-like-course-info-lessons">
+                        <img
+                          src="./assets/images/icons/book.png"
+                          alt="book icon"
+                        />
+                        <span>12 Lessons</span>
+                      </div>
+                      <div class="may-like-course-info-hours">
+                        <img
+                          src="./assets/images/icons/clock.png"
+                          alt="clock icon"
+                        />
+                        <span>95 Hours</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="may-like-slide-details">
+                    <h3>Business Environment in Georgia</h3>
+                    <p>
+                      Lorem ipsum volutpat eget velit nunc at tellus suscipit
+                      lacus dolor posuere rhoncus sit est.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="may-like-actions-wrapper">
+                  <div class="mobile-may-like-dates">
+                    <span>Start Date</span>
+                    <span>Nov 01, 2025</span>
+                  </div>
+
+                  <div class="may-like-course-price">
+                    <p class="current-price">$35,99</p>
+                    <p class="old-price">$55,99</p>
+                    <p class="sale">40% off</p>
+                  </div>
+
+                  <div class="may-like-course-actions">
+                    <button class="add-to-cart">
+                      <span>Add to cart</span>
+                      <img
+                        src="./assets/images/icons/cart-white.png"
+                        alt="cart icon"
+                      />
+                    </button>
+                    <button class="add-to-favorites">
+                      <img
+                        src="./assets/images/icons/heart.svg"
+                        alt="heart icon"
+                      />
+                    </button>
+                  </div>
+                </div>
+              </a>
+
+              <div class="swiper-slide">
+                <div class="may-like-slide">
+                  <div class="may-like-slide-img">
+                    <img
+                      src="./assets/images/home/courses-slider-2.png"
+                      alt=""
+                    />
+
+                    <div class="may-like-course-logos">
+                      <div class="may-like-course-logo-img">
+                        <img
+                          src="./assets/images/logos/logo-1.png"
+                          alt="logo"
+                        />
+                      </div>
+                      <div class="may-like-course-logo-img">
+                        <img
+                          src="./assets/images/logos/logo-2.png"
+                          alt="logo"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="may-like-course-info">
+                      <div class="may-like-course-info-lessons">
+                        <img
+                          src="./assets/images/icons/book.png"
+                          alt="book icon"
+                        />
+                        <span>12 Lessons</span>
+                      </div>
+                      <div class="may-like-course-info-hours">
+                        <img
+                          src="./assets/images/icons/clock.png"
+                          alt="clock icon"
+                        />
+                        <span>95 Hours</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="may-like-slide-details">
+                    <h3>Business Environment in Georgia</h3>
+                    <p>
+                      Lorem ipsum volutpat eget velit nunc at tellus suscipit
+                      lacus dolor posuere rhoncus sit est.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="may-like-actions-wrapper">
+                  <div class="mobile-may-like-dates">
+                    <span>Start Date</span>
+                    <span>Nov 01, 2025</span>
+                  </div>
+
+                  <div class="may-like-course-price">
+                    <p class="current-price">$35,99</p>
+                    <p class="old-price">$55,99</p>
+                    <p class="sale">40% off</p>
+                  </div>
+
+                  <div class="may-like-course-actions">
+                    <button class="add-to-cart">
+                      <span>Add to cart</span>
+                      <img
+                        src="./assets/images/icons/cart-white.png"
+                        alt="cart icon"
+                      />
+                    </button>
+                    <button class="add-to-favorites">
+                      <img
+                        src="./assets/images/icons/heart.svg"
+                        alt="heart icon"
+                      />
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="may-like-slide">
+                  <div class="may-like-slide-img">
+                    <img
+                      src="./assets/images/home/courses-slider-2.png"
+                      alt=""
+                    />
+
+                    <div class="may-like-course-logos">
+                      <div class="may-like-course-logo-img">
+                        <img
+                          src="./assets/images/logos/logo-1.png"
+                          alt="logo"
+                        />
+                      </div>
+                      <div class="may-like-course-logo-img">
+                        <img
+                          src="./assets/images/logos/logo-2.png"
+                          alt="logo"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="may-like-course-info">
+                      <div class="may-like-course-info-lessons">
+                        <img
+                          src="./assets/images/icons/book.png"
+                          alt="book icon"
+                        />
+                        <span>12 Lessons</span>
+                      </div>
+                      <div class="may-like-course-info-hours">
+                        <img
+                          src="./assets/images/icons/clock.png"
+                          alt="clock icon"
+                        />
+                        <span>95 Hours</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="may-like-slide-details">
+                    <h3>Business Environment in Georgia</h3>
+                    <p>
+                      Lorem ipsum volutpat eget velit nunc at tellus suscipit
+                      lacus dolor posuere rhoncus sit est.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="may-like-actions-wrapper">
+                  <div class="mobile-may-like-dates">
+                    <span>Start Date</span>
+                    <span>Nov 01, 2025</span>
+                  </div>
+
+                  <div class="may-like-course-price">
+                    <p class="current-price">$35,99</p>
+                    <p class="old-price">$55,99</p>
+                    <p class="sale">40% off</p>
+                  </div>
+
+                  <div class="may-like-course-actions">
+                    <button class="add-to-cart">
+                      <span>Add to cart</span>
+                      <img
+                        src="./assets/images/icons/cart-white.png"
+                        alt="cart icon"
+                      />
+                    </button>
+                    <button class="add-to-favorites">
+                      <img
+                        src="./assets/images/icons/heart.svg"
+                        alt="heart icon"
+                      />
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="may-like-slide">
+                  <div class="may-like-slide-img">
+                    <img
+                      src="./assets/images/home/courses-slider-2.png"
+                      alt=""
+                    />
+
+                    <div class="may-like-course-logos">
+                      <div class="may-like-course-logo-img">
+                        <img
+                          src="./assets/images/logos/logo-1.png"
+                          alt="logo"
+                        />
+                      </div>
+                      <div class="may-like-course-logo-img">
+                        <img
+                          src="./assets/images/logos/logo-2.png"
+                          alt="logo"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="may-like-course-info">
+                      <div class="may-like-course-info-lessons">
+                        <img
+                          src="./assets/images/icons/book.png"
+                          alt="book icon"
+                        />
+                        <span>12 Lessons</span>
+                      </div>
+                      <div class="may-like-course-info-hours">
+                        <img
+                          src="./assets/images/icons/clock.png"
+                          alt="clock icon"
+                        />
+                        <span>95 Hours</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="may-like-slide-details">
+                    <h3>Business Environment in Georgia</h3>
+                    <p>
+                      Lorem ipsum volutpat eget velit nunc at tellus suscipit
+                      lacus dolor posuere rhoncus sit est.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="may-like-actions-wrapper">
+                  <div class="mobile-may-like-dates">
+                    <span>Start Date</span>
+                    <span>Nov 01, 2025</span>
+                  </div>
+
+                  <div class="may-like-course-price">
+                    <p class="current-price">$35,99</p>
+                    <p class="old-price">$55,99</p>
+                    <p class="sale">40% off</p>
+                  </div>
+
+                  <div class="may-like-course-actions">
+                    <button class="add-to-cart">
+                      <span>Add to cart</span>
+                      <img
+                        src="./assets/images/icons/cart-white.png"
+                        alt="cart icon"
+                      />
+                    </button>
+                    <button class="add-to-favorites">
+                      <img
+                        src="./assets/images/icons/heart.svg"
+                        alt="heart icon"
+                      />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="courses-swiper-navigation container">
+            <div class="swiper-scrollbar may-like-swiper-scrollbar"></div>
+
+            <div class="may-like-swiper-btns">
+              <div
+                class="may-like-swiper-button-prev swiper-custom-button-prev"
+              >
+                <img src="./assets/images/icons/arrow-right.png" alt="arrow" />
+              </div>
+              <div
+                class="may-like-swiper-button-next swiper-custom-button-next"
+              >
+                <img src="./assets/images/icons/arrow-right.png" alt="arrow" />
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
 
