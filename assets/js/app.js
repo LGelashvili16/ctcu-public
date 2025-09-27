@@ -67,7 +67,7 @@ const handleAllSwiperInit = () => {
     mayLikeSwiper: {
       slidesPerView: "auto",
       spaceBetween: 20,
-      centeredSlides: true,
+      // centeredSlides: true,
       speed: 700,
       navigation: {
         nextEl: ".may-like-swiper-button-next",
@@ -81,6 +81,9 @@ const handleAllSwiperInit = () => {
       breakpoints: {
         768: {
           spaceBetween: 40,
+          scrollbar: {
+            dragSize: 148,
+          },
         },
       },
     },

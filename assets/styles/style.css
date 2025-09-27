@@ -4920,23 +4920,247 @@ li.terms-list-item::marker {
 }
 
 /* You May Also Like Swiper */
+#mayLikeSwiper {
+  overflow: visible;
+}
 #mayLikeSwiper .swiper-slide {
   width: 410px;
 }
+#mayLikeSwiper .swiper-slide {
+  position: relative;
+  width: 410px;
+  border-radius: 8px;
+  background: linear-gradient(
+    -37deg,
+    var(--bg-tertiary-color-5),
+    var(--bg-tertiary-color-15)
+  );
+  /* box-shadow: 0 0 0 1px var(--bg-tertiary-color-30); */
+  transition: box-shadow 0.4s;
+}
+#mayLikeSwiper .swiper-slide::before {
+  content: "";
+  position: absolute;
+  /* inset: 0; */
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  border-radius: 9px;
+  border: 1px solid transparent;
+  background: linear-gradient(
+      -48deg,
+      var(--border-primary-color-50),
+      var(--border-primary-color-20)
+    )
+    border-box;
+  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+  z-index: -1;
+}
 
 #mayLikeSwiper .swiper-slide.swiper-slide-active {
-  width: 438px;
-  /* height: 402px; */
-  background: linear-gradient(
-    to bottom right,
-    var(--bg-tertiary-color-15),
-    var(--bg-tertiary-color-5)
-  );
-  /* background: linear-gradient(to bottom, var(--bg-tertiary-color-20), var(--bg-tertiary-color-5)), linear-gradient(to bottom right, var(--bg-tertiary-color-15), var(--bg-tertiary-color-5)); */
-  opacity: 1;
-  box-shadow: 0 0 0 1px var(--bg-tertiary-color-30),
-    0 0 40px 5px var(--bg-tertiary-color-20);
+  box-shadow: 0 0 40px 5px var(--bg-tertiary-color-20);
   z-index: 1;
+}
+.may-like-slide-img {
+  position: relative;
+}
+.may-like-slide-img > img {
+  display: block;
+  width: 100%;
+  height: 231px;
+  object-fit: cover;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.may-like-course-logos {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.may-like-course-logo-img {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  background-color: var(--bg-quaternary-color-50);
+  backdrop-filter: blur(4px);
+}
+
+.may-like-course-logo-img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  background: linear-gradient(
+      -54deg,
+      var(--bg-tertiary-color-60),
+      var(--bg-tertiary-color-30)
+    )
+    border-box;
+  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+}
+
+.may-like-course-logo-img > img {
+  width: 35px;
+  height: 35px;
+}
+
+.may-like-slide-img .may-like-course-info {
+  background-color: var(--bg-quaternary-color-50);
+  backdrop-filter: blur(4px);
+  border-radius: 8px;
+  width: 203px;
+  height: 36px;
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.may-like-course-info-lessons {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.may-like-course-info-lessons img {
+  width: 20px;
+  height: 16px;
+}
+.may-like-course-info-lessons span {
+  font-size: 10px;
+}
+
+.may-like-course-info-hours {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.may-like-course-info-hours img {
+  width: 16px;
+  height: 16px;
+}
+.may-like-course-info-hours span {
+  font-size: 10px;
+}
+.may-like-slide-details {
+  padding: 16px 16px 0;
+}
+.may-like-slide-details h3 {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+}
+.may-like-slide-details p {
+  margin-top: 20px;
+  font-size: 18px;
+  line-height: 24px;
+
+  line-clamp: 3;
+  -webkit-line-clamp: 3;
+  box-orient: vertical;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.may-like-actions-wrapper {
+  margin-top: 25px;
+  padding: 0 16px 16px;
+}
+.may-like-price-and-date {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.may-like-dates {
+  order: 1;
+  display: flex;
+  flex-direction: column;
+}
+.may-like-dates span:first-child {
+  font-size: 12px;
+  color: var(--text-primary-color-60);
+}
+.may-like-dates span:last-child {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-primary-color-90);
+}
+
+.may-like-course-price {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+.may-like-course-price .current-price {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-primary-color-90);
+}
+.may-like-course-price .old-price {
+  font-size: 16px;
+  color: var(--text-primary-color-60);
+  text-decoration: line-through;
+}
+.may-like-course-price .sale {
+  width: 77px;
+  height: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary-color-90);
+  background-color: var(--color-red-600);
+  border-radius: 5px;
+}
+.may-like-course-actions {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 44px;
+  gap: 16px;
+}
+.may-like-course-actions .add-to-cart {
+  border-radius: 10px;
+}
+
+.may-like-swiper-scrollbar {
+  position: static !important;
+  height: 17px !important;
+  border-radius: 12px;
+  background-color: var(--bg-tertiary-color-10);
+  box-shadow: 0 0 0 1px var(--bg-tertiary-color-10) inset;
+}
+.may-like-swiper-scrollbar .swiper-scrollbar-drag {
+  background-color: var(--bg-tertiary-color-60);
+  box-shadow: 0 0 0 1px var(--bg-tertiary-color) inset;
+}
+.may-like-swiper-btns {
+  display: flex;
+  gap: 16px;
 }
 
 @media (max-width: 1024px) {
