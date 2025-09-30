@@ -5811,6 +5811,9 @@ li.terms-list-item::marker {
 }
 
 /* !Syllabus Inner Page */
+.syllabus-page-section {
+  padding-inline: 24px;
+}
 .syllabus-page-gradient-bg {
   position: absolute;
   top: -50%;
@@ -5837,7 +5840,7 @@ li.terms-list-item::marker {
 .syllabus-page-content-wrapper {
   margin-bottom: 88px;
   display: grid;
-  grid-template-columns: 1fr 411px;
+  grid-template-columns: minmax(250px, 1fr) 411px;
   gap: 40px;
 }
 .syllabus-page-content h1 {
@@ -5904,7 +5907,7 @@ li.terms-list-item::marker {
 .syllabus-imgs {
   margin-block: 20px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(272px, 1fr));
   gap: 40px;
 }
 .syllabus-imgs img {
@@ -6092,4 +6095,44 @@ li.terms-list-item::marker {
   font-size: 12px;
   line-height: 18px;
   color: var(--text-primary-color-70);
+}
+
+@media (max-width: 768px) {
+  .back-btn-container {
+    position: relative;
+    max-width: 1350px;
+    padding-inline: 24px;
+    margin-inline: auto;
+    margin-block: 40px 0;
+  }
+  .back-btn-container::after {
+    content: "";
+    margin-top: 16px;
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(
+      var(--border-primary-color-30),
+      var(--border-primary-color-50)
+    );
+    z-index: -1;
+  }
+
+  .syllabus-page-content-wrapper {
+    margin-bottom: 88px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .syllabus-page-side-content {
+    margin-top: 40px;
+    grid-row-start: 1;
+  }
+
+  .syllabus-imgs {
+    grid-template-columns: 1fr;
+  }
+  .classroom-card {
+    margin-top: 0;
+  }
 }
