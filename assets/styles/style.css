@@ -148,7 +148,6 @@ main {
 }
 
 /* !Global */
-
 .container {
   max-width: 1312px;
   margin: 0 auto;
@@ -239,6 +238,20 @@ ul {
   100% {
     transform: rotate(0deg);
   }
+}
+
+/* !Hover States */
+.primary-btn {
+  background-color: var(--color-primary-80);
+  transition: background-color 0.2s;
+}
+.primary-btn:hover {
+  background-color: var(--color-primary);
+}
+
+.outline-btn {
+}
+.outline-btn {
 }
 
 /* !Header */
@@ -4465,20 +4478,20 @@ li.terms-list-item::marker {
   border-bottom-left-radius: 8px;
 }
 
-.syllabus-accordion-block {
+.accordion-block {
   margin-top: 93px;
 }
-.syllabus-accordion-block h2 {
+.accordion-block h2 {
   font-size: 32px;
   font-weight: 900;
 }
-.syllabus-accordion-block .accordion {
+.accordion-block .accordion {
   margin-top: 40px;
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
-.syllabus-accordion-block .accordion-item {
+.accordion-block .accordion-item {
   background: linear-gradient(
     -85deg,
     var(--bg-tertiary-color-5),
@@ -4487,7 +4500,7 @@ li.terms-list-item::marker {
   box-shadow: 0 0 0 1px var(--border-primary-color-20) inset;
   border-radius: 12px;
 }
-.syllabus-accordion-block .accordion-item.open .accordion-button::before {
+.accordion-block .accordion-item.open .accordion-button::before {
   content: "";
   position: absolute;
   top: -12px;
@@ -4505,7 +4518,7 @@ li.terms-list-item::marker {
   opacity: 0.6;
   z-index: -1;
 }
-.syllabus-accordion-block .accordion-button {
+.accordion-block .accordion-button {
   padding: 20px;
   position: relative;
   display: grid;
@@ -4541,7 +4554,7 @@ li.terms-list-item::marker {
   font-weight: 700;
 }
 
-.syllabus-accordion-block .accordion-item.open .accordion-button::after {
+.accordion-block .accordion-item.open .accordion-button::after {
   content: "";
   position: absolute;
   top: 0;
@@ -4551,13 +4564,13 @@ li.terms-list-item::marker {
   opacity: 0.3;
   backdrop-filter: blur(24px);
   background: linear-gradient(
-    0deg,
-    var(--bg-tertiary-color-30),
-    var(--bg-tertiary-color-60)
+    to bottom,
+    var(--bg-tertiary-color-60),
+    var(--bg-tertiary-color-30)
   );
   z-index: -1;
 }
-.syllabus-accordion-block .accordion-chevron {
+.accordion-block .accordion-chevron {
   width: 44px;
   height: 44px;
   border: 1px solid var(--border-primary-color-50);
@@ -4569,7 +4582,7 @@ li.terms-list-item::marker {
 .accordion-chevron img {
   transition: transform 0.3s ease-in-out;
 }
-.syllabus-accordion-block .accordion-content {
+.accordion-block .accordion-content {
   height: 0;
   overflow: hidden;
   transition: height 0.3s ease-in-out;
@@ -5486,19 +5499,19 @@ li.terms-list-item::marker {
     color: var(--text-primary-color-70);
   }
 
-  .syllabus-accordion-block {
+  .accordion-block {
     margin-top: 60px;
   }
-  .syllabus-accordion-block h2 {
+  .accordion-block h2 {
     text-align: center;
     font-size: 20px;
   }
-  .syllabus-accordion-block .accordion-button {
+  .accordion-block .accordion-button {
     padding: 24px 18px 24px 24px;
     grid-template-columns: 1fr 40px;
     height: fit-content;
   }
-  .syllabus-accordion-block .accordion-chevron {
+  .accordion-block .accordion-chevron {
     width: 40px;
     height: 40px;
   }
@@ -6218,7 +6231,7 @@ li.terms-list-item::marker {
 }
 
 /* !Affiliate Landing */
-.affiliate-landing-section {
+.affiliate-page-section {
   padding: 0 24px 100px;
 }
 
@@ -6302,4 +6315,113 @@ li.terms-list-item::marker {
   -webkit-mask-composite: destination-out;
   mask-composite: exclude;
   z-index: -1;
+}
+
+.affiliate-sign-up-card h2 {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 900;
+}
+.affiliate-sign-up-form {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.affiliate-sign-up-form .terms-checkbox-wrapper p {
+  margin-left: 20px;
+}
+.affiliate-sign-up-form .terms-label {
+  margin: 0;
+}
+.affiliate-sign-up-form .form-btn {
+  height: 44px;
+}
+.affiliate-sign-up-form .form-btn p span {
+  font-size: 16px;
+  font-variation-settings: "wght" 500;
+  color: var(--text-primary-color-90);
+  transition: font-variation-settings 0.2s ease;
+}
+
+.faq-accordion-block {
+  margin-top: 100px;
+}
+.faq-accordion-block .accordion-button {
+  height: auto;
+  padding: 24px;
+  background: linear-gradient(
+    -67deg,
+    var(--bg-tertiary-color-5),
+    var(--bg-tertiary-color-10)
+  );
+}
+.faq-accordion-block .accordion-button::before {
+  display: none;
+}
+.faq-accordion-block .accordion-content-texts {
+  padding: 20px;
+}
+
+.affiliate-page.may-also-like-section {
+  padding-bottom: 120px;
+}
+
+@media (max-width: 768px) {
+  .affiliate-page-content-wrapper {
+    margin-top: 60px;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .affiliate-page-content-wrapper h1 {
+    position: relative;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1;
+    grid-column: span 1;
+  }
+  .affiliate-page-content-wrapper h1:after {
+    content: "";
+    margin-top: 16px;
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(
+      var(--border-primary-color-30),
+      var(--border-primary-color-50)
+    );
+  }
+  .affiliate-page-img {
+    height: 200px;
+    margin-bottom: 20px;
+  }
+  .affiliate-page-img img {
+    border-radius: 4px;
+  }
+  .affiliate-page-text-content-wrapper p {
+    text-align: justify;
+  }
+
+  .affiliate-page-side-content {
+    margin-top: 40px;
+    padding: 10px;
+  }
+  .affiliate-sign-up-card h2 {
+    font-size: 24px;
+  }
+  .affiliate-sign-up-form {
+    margin-top: 20px;
+  }
+  .faq-accordion-block {
+    margin-top: 40px;
+  }
+  .faq-accordion-block .accordion-button .accordion-chevron {
+    border: none;
+  }
+  .affiliate-page-section {
+    padding: 0 24px 60px;
+  }
+  .affiliate-page.may-also-like-section {
+    padding-bottom: 60px;
+  }
 }
