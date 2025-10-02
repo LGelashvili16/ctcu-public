@@ -16,13 +16,19 @@
   --color-red-600-80: #ef4444cc;
 
   --color-gold: #ffe2ac;
-  --color-gold-20: hsla(39, 100%, 50%, 0.2);
+  --color-gold-20: #ffa60033;
   --color-gold-30: hsla(30, 61%, 50%, 0.3);
   --color-gold-40: hsla(39, 100%, 50%, 0.4);
   --color-gold-50: hsla(39, 100%, 50%, 0.5);
   --color-gold-80: hsla(39, 100%, 50%, 0.8);
   --color-gold-80: hsla(39, 100%, 50%, 0.8);
   --color-dark-gold-80: hsla(30, 61%, 50%, 0.8);
+
+  --color-yellow-5: hsla(55, 86%, 49%, 0.05);
+  --color-yellow-20: hsla(55, 86%, 49%, 0.2);
+
+  --color-yellow2-30: hsla(64, 86%, 49%, 0.3);
+  --color-yellow2-50: hsla(64, 86%, 49%, 0.5);
 
   --color-lightblue: #24c3ea;
   --color-green: #469449;
@@ -279,6 +285,7 @@ ul {
   );
   border-radius: 4px;
   z-index: -1;
+  transition: opacity 0.2s;
 }
 .gradient-btn::after {
   content: "";
@@ -301,6 +308,13 @@ ul {
   -webkit-mask-composite: destination-out;
   mask-composite: exclude;
   z-index: -1;
+  transition: opacity 0.2s;
+}
+.gradient-btn:hover::before {
+  opacity: 0.6;
+}
+.gradient-btn:hover::after {
+  opacity: 0.9;
 }
 
 /* !Header */
@@ -6535,4 +6549,93 @@ li.terms-list-item::marker {
   font-size: 18px;
   font-weight: 600;
   letter-spacing: 2px;
+}
+.study-abroad-hero-image {
+  margin-top: 100px;
+  width: 100%;
+  height: 502px;
+}
+.study-abroad-hero-image img {
+  border-radius: 18px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.9;
+}
+
+.gradient-yellow-bg {
+  position: relative;
+}
+.gradient-yellow-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    var(--color-yellow-20),
+    var(--color-yellow-5)
+  );
+  opacity: 0.7;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+.gradient-yellow-bg::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border: 1px solid transparent;
+  opacity: 0.7;
+  background: linear-gradient(
+      to bottom,
+      var(--color-yellow2-30),
+      var(--color-yellow2-50)
+    )
+    border-box;
+  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+}
+
+.study-abroad-hero-stats {
+  padding-block: 18px;
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 156px);
+  gap: 20px;
+  justify-content: center;
+}
+
+.study-abroad-hero-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.stat-img-wrapper {
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+}
+.certificate-stat img {
+  width: 36px;
+}
+.study-abroad-hero-stat h3 {
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 26px;
+}
+.study-abroad-hero-stat p {
+  margin-top: 4px;
+  font-size: 16px;
+  line-height: 26px;
+  color: var(--text-primary-color-70);
 }
