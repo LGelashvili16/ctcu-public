@@ -415,3 +415,25 @@ const validatePasswordRecoveryForm = () => {
   }
 };
 validatePasswordRecoveryForm();
+
+// !Agenda Tabs
+const handleAgendaTabs = () => {
+  const agendaDays = document.querySelectorAll(".agenda-day");
+  const agendaContents = document.querySelectorAll(".agenda-details-content");
+
+  if (agendaDays.length && agendaContents.length) {
+    agendaDays.forEach((day, index) => {
+      day.addEventListener("click", () => {
+        // Remove active class from all days
+        agendaDays.forEach((d) => d.classList.remove("active"));
+        day.classList.add("active");
+
+        // Hide all contents
+        agendaContents.forEach((content) => content.classList.remove("active"));
+        const activeContent = agendaContents[index];
+        if (activeContent) activeContent.classList.add("active");
+      });
+    });
+  }
+};
+handleAgendaTabs();
