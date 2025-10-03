@@ -87,6 +87,29 @@ const handleAllSwiperInit = () => {
         },
       },
     },
+    agendaDaysSwiper: {
+      slidesPerView: "auto",
+      spaceBetween: 20,
+      direction: "horizontal",
+      navigation: {
+        nextEl: ".agenda-swiper-button-next",
+        prevEl: ".agenda-swiper-button-prev",
+      },
+      scrollbar: {
+        el: ".swiper-scrollbar",
+        draggable: true,
+        dragSize: 49,
+      },
+      breakpoints: {
+        768: {
+          direction: "vertical",
+
+          // scrollbar: {
+          //   dragSize: 148,
+          // },
+        },
+      },
+    },
   };
 
   for (swiperId in swiperConfigs) {

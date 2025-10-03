@@ -269,6 +269,14 @@
 
     <main>
       <section class="study-abroad-page-section">
+        <div class="course-inner-gradient-bg-1"></div>
+        <div class="course-inner-gradient-bg-2"></div>
+        <div class="course-inner-gradient-bg-3"></div>
+        <div class="course-inner-gradient-bg-4"></div>
+        <div class="course-inner-gradient-bg-5"></div>
+        <div class="course-inner-gradient-bg-6"></div>
+        <div class="course-inner-gradient-bg-7"></div>
+
         <div class="container study-abroad-page-hero">
           <div class="study-abroad-hero-decorations-wrapper">
             <div class="study-abroad-hero-decorations">
@@ -277,12 +285,17 @@
             </div>
 
             <div class="study-abroad-hero-title-wrapper">
-              <img
-                src="./assets/images/study-abroad/outline.png"
-                alt="outline"
-                class="outline-icon"
-              />
-              <h1>Study Abroad Program Entrepreneurship in Dubai</h1>
+              <h1>
+                Study Abroad Program Entrepreneurship in
+                <span
+                  >Dubai
+                  <img
+                    src="./assets/images/study-abroad/outline.png"
+                    alt="outline"
+                    class="outline-icon"
+                  />
+                </span>
+              </h1>
             </div>
 
             <div class="study-abroad-hero-decorations">
@@ -306,7 +319,7 @@
           </div>
 
           <div class="gradient-yellow-bg study-abroad-hero-stats">
-            <div class="study-abroad-hero-stat">
+            <div class="gradient-yellow-bg study-abroad-hero-stat">
               <div class="stat-img-wrapper">
                 <img
                   src="./assets/images/icons/calendar-marked.png"
@@ -317,7 +330,9 @@
               <p>5 Apr 2025</p>
             </div>
 
-            <div class="study-abroad-hero-stat certificate-stat">
+            <div
+              class="gradient-yellow-bg study-abroad-hero-stat certificate-stat"
+            >
               <div class="stat-img-wrapper">
                 <img
                   src="./assets/images/icons/certificate.png"
@@ -328,7 +343,7 @@
               <p>AXELOS Accredited</p>
             </div>
 
-            <div class="study-abroad-hero-stat">
+            <div class="gradient-yellow-bg study-abroad-hero-stat">
               <div class="stat-img-wrapper">
                 <img src="./assets/images/icons/clock-white.png" alt="clock" />
               </div>
@@ -336,7 +351,7 @@
               <p>2 Days</p>
             </div>
 
-            <div class="study-abroad-hero-stat">
+            <div class="gradient-yellow-bg study-abroad-hero-stat">
               <div class="stat-img-wrapper">
                 <img src="./assets/images/icons/pin-white.png" alt="pin" />
               </div>
@@ -344,7 +359,7 @@
               <p>1433 Street address</p>
             </div>
 
-            <div class="study-abroad-hero-stat">
+            <div class="gradient-yellow-bg study-abroad-hero-stat">
               <div class="stat-img-wrapper">
                 <img
                   src="./assets/images/icons/calendar-crossed.png"
@@ -360,27 +375,80 @@
 
       <section class="agenda-section">
         <div class="container agenda-block">
-          <div class="agenda-days-list">
-            <div class="gradient-bg agenda-day active" data-day="1">
-              <p>Day - 1</p>
+          <div>
+            <div
+              class="container courses-swiper-navigation agenda-swiper-navigation"
+            >
+              <div
+                class="swiper-scrollbar courses-swiper-scrollbar swiper-scrollbar-horizontal"
+              >
+                <div
+                  class="swiper-scrollbar-drag"
+                  style="
+                    transform: translate3d(0px, 0px, 0px);
+                    transition-duration: 0ms;
+                    width: 148px;
+                  "
+                ></div>
+              </div>
+
+              <div class="courses-swiper-btns">
+                <div
+                  class="agenda-swiper-button-prev swiper-custom-button-prev swiper-button-disabled"
+                  tabindex="-1"
+                  role="button"
+                  aria-label="Previous slide"
+                  aria-controls="swiper-wrapper-5a77d1098a59e4d7"
+                  aria-disabled="true"
+                >
+                  <img
+                    src="./assets/images/icons/arrow-right.png"
+                    alt="arrow"
+                  />
+                </div>
+                <div
+                  class="agenda-swiper-button-next swiper-custom-button-next"
+                  tabindex="0"
+                  role="button"
+                  aria-label="Next slide"
+                  aria-controls="swiper-wrapper-5a77d1098a59e4d7"
+                  aria-disabled="false"
+                >
+                  <img
+                    src="./assets/images/icons/arrow-right.png"
+                    alt="arrow"
+                  />
+                </div>
+              </div>
             </div>
-            <div class="gradient-bg agenda-day" data-day="2">
-              <p>Day - 2</p>
-            </div>
-            <div class="gradient-bg agenda-day" data-day="3">
-              <p>Day - 3</p>
-            </div>
-            <div class="gradient-bg agenda-day" data-day="4">
-              <p>Day - 4</p>
-            </div>
-            <div class="gradient-bg agenda-day" data-day="5">
-              <p>Day - 5</p>
-            </div>
-            <div class="gradient-bg agenda-day" data-day="6">
-              <p>Day - 6</p>
-            </div>
-            <div class="gradient-bg agenda-day" data-day="7">
-              <p>Day - 7</p>
+
+            <div class="swiper agenda-days-swiper" id="agendaDaysSwiper">
+              <div class="swiper-wrapper agenda-days-list">
+                <div
+                  class="swiper-slide gradient-bg agenda-day active"
+                  data-day="1"
+                >
+                  <p>Day - 1</p>
+                </div>
+                <div class="swiper-slide gradient-bg agenda-day" data-day="2">
+                  <p>Day - 2</p>
+                </div>
+                <div class="swiper-slide gradient-bg agenda-day" data-day="3">
+                  <p>Day - 3</p>
+                </div>
+                <div class="swiper-slide gradient-bg agenda-day" data-day="4">
+                  <p>Day - 4</p>
+                </div>
+                <div class="swiper-slide gradient-bg agenda-day" data-day="5">
+                  <p>Day - 5</p>
+                </div>
+                <div class="swiper-slide gradient-bg agenda-day" data-day="6">
+                  <p>Day - 6</p>
+                </div>
+                <div class="swiper-slide gradient-bg agenda-day" data-day="7">
+                  <p>Day - 7</p>
+                </div>
+              </div>
             </div>
           </div>
 

@@ -126,6 +126,7 @@
   --shadow-primary-60: #00000099;
   --shadow-white-8: #ffffff14;
   --shadow-white-10: #ffffff1a;
+  --shadow-black-25: rgba(23, 23, 23, 0.25);
 
   color-scheme: dark light;
 }
@@ -136,11 +137,11 @@
 }
 
 body {
-  width: 100vw;
+  /* width: 100vw; */
   font-family: "Montserrat", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: var(--bg-primary-color);
   color: var(--text-primary-color);
-  overflow-x: hidden !important;
+  /* overflow-x: hidden !important; */
   padding-top: 61px;
   scroll-behavior: smooth;
 }
@@ -149,10 +150,6 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
-
-main {
-  /* min-height: 100vh; */
 }
 
 /* !Global */
@@ -200,7 +197,7 @@ ul {
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  border-bottom-right-radius: 8px;
+  border-bottom-right-radius: 10px;
   z-index: 100;
 }
 
@@ -245,6 +242,19 @@ ul {
   }
   100% {
     transform: rotate(0deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .whatsapp {
+    /* right: 0; */
+    bottom: 30px;
+    width: 54px;
+    height: 54px;
+  }
+  .whatsapp img {
+    width: 34px;
+    height: 34px;
   }
 }
 
@@ -2541,8 +2551,24 @@ ul {
 /* !Top Instructors Home */
 
 .top-instructors-section {
+  position: relative;
   padding-inline: 24px;
   margin-top: 100px;
+  overflow-x: clip;
+}
+.top-instructors-section::after {
+  content: "";
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 160%;
+  height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--color-primary), transparent);
+  opacity: 0.2;
+  filter: blur(60px);
+  z-index: -1;
 }
 
 .top-instructors-section h2 {
@@ -2559,20 +2585,6 @@ ul {
   grid-auto-rows: 340px;
   justify-content: center;
   gap: 40px;
-}
-.top-instructors-list::after {
-  content: "";
-  position: absolute;
-  top: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 160%;
-  height: 300px;
-  border-radius: 50%;
-  background: radial-gradient(circle, var(--color-primary), transparent);
-  opacity: 0.2;
-  filter: blur(60px);
-  z-index: -1;
 }
 
 .top-instructor-card {
@@ -6501,8 +6513,41 @@ li.terms-list-item::marker {
 
 /* !Study Abroad */
 .study-abroad-page-section {
-  margin-top: 66px;
+  padding-top: 66px;
+  padding-inline: 24px;
+  position: relative;
+  overflow-x: clip;
 }
+.study-abroad-page-hero {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.study-abroad-page-section .course-inner-gradient-bg-1,
+.study-abroad-page-section .course-inner-gradient-bg-5,
+.study-abroad-page-section .course-inner-gradient-bg-6,
+.study-abroad-page-section .course-inner-gradient-bg-7 {
+  display: none;
+}
+.study-abroad-page-section .course-inner-gradient-bg-2 {
+  display: none;
+  top: -150px;
+  left: -40%;
+  background: radial-gradient(circle, hsla(0, 85%, 42%, 0.7), transparent);
+}
+.study-abroad-page-section .course-inner-gradient-bg-3 {
+  top: -300px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: radial-gradient(circle, hsla(200, 94%, 39%, 0.5), transparent);
+}
+.study-abroad-page-section .course-inner-gradient-bg-4 {
+  top: 251px;
+  right: -600px;
+  width: 1000px;
+  height: 1000px;
+  background: radial-gradient(circle, hsla(278, 83%, 47%, 0.5), transparent);
+}
+
 .study-abroad-hero-decorations-wrapper {
   max-width: 879px;
   margin-inline: auto;
@@ -6510,7 +6555,7 @@ li.terms-list-item::marker {
 
 .study-abroad-hero-title-wrapper {
   position: relative;
-  margin-inline: auto;
+  margin-inline: 10px;
   width: fit-content;
   max-width: 861px;
   padding: 30px;
@@ -6520,8 +6565,8 @@ li.terms-list-item::marker {
   width: 179px;
   height: 71px;
   position: absolute;
-  right: 26px;
-  bottom: 30px;
+  top: -12px;
+  left: -5px;
 }
 .study-abroad-hero-title-wrapper h1 {
   width: fit-content;
@@ -6531,6 +6576,9 @@ li.terms-list-item::marker {
   line-height: 64px;
   text-align: center;
   text-transform: uppercase;
+}
+.study-abroad-hero-title-wrapper h1 span {
+  position: relative;
 }
 .study-abroad-hero-decorations {
   display: flex;
@@ -6559,6 +6607,8 @@ li.terms-list-item::marker {
   font-size: 18px;
   font-weight: 600;
   letter-spacing: 2px;
+  box-shadow: 0 12px 24px 0 var(--shadow-black-25);
+  backdrop-filter: blur(24px);
 }
 .study-abroad-hero-image {
   margin-top: 100px;
@@ -6634,6 +6684,10 @@ li.terms-list-item::marker {
   width: 56px;
   height: 56px;
 }
+.study-abroad-hero-stat::before,
+.study-abroad-hero-stat::after {
+  display: none;
+}
 .certificate-stat img {
   width: 36px;
 }
@@ -6655,19 +6709,31 @@ li.terms-list-item::marker {
   padding-inline: 24px;
 }
 .agenda-block {
-  display: flex;
+  display: grid;
+  grid-template-columns: 299px 1fr;
   gap: 38px;
+  /* max-height: 795px; */
+}
+.agenda-swiper-navigation {
+  display: none;
+  margin-block: 0 20px;
+}
+.agenda-days-swiper {
+  width: 100%;
+  max-height: 795px;
 }
 .agenda-days-list {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+  /* display: flex;
+  flex-direction: column; */
+  /* gap: 20px; */
 }
 .agenda-day {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 299px;
+  height: fit-content;
   padding: 20px;
   background-color: var(--bg-tertiary-color-5);
   border-radius: 12px;
@@ -6681,6 +6747,7 @@ li.terms-list-item::marker {
   border-radius: 12px;
   border: 1px solid transparent;
   opacity: 0.2;
+  transition: border 0.1s;
 }
 .agenda-day.active {
   background-color: var(--bg-tertiary-color-10);
@@ -6690,7 +6757,17 @@ li.terms-list-item::marker {
   transition: background-color 0.2s;
 }
 .agenda-day.active::after {
-  display: none;
+  /* display: none; */
+  border: none;
+  opacity: 1;
+  border-right: 3px solid transparent;
+  background: linear-gradient(
+      to bottom,
+      var(--bg-blue-350),
+      var(--bg-pink-550),
+      var(--bg-red-650)
+    )
+    border-box;
 }
 .agenda-day:hover {
   background-color: var(--bg-tertiary-color-10);
@@ -6836,6 +6913,7 @@ li.terms-list-item::marker {
 
 .program-related-course-section {
   margin-top: 100px;
+  padding-inline: 24px;
 }
 .program-related-course {
   max-width: 862px;
@@ -6911,4 +6989,229 @@ li.terms-list-item::marker {
   font-family: "Montserrat";
   font-size: 18px;
   font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .study-abroad-page-section {
+    padding-top: 60px;
+  }
+  .study-abroad-page-section .course-inner-gradient-bg-1 {
+    top: 693px;
+    height: 533px;
+    display: block;
+    z-index: -3;
+    opacity: 0.3;
+  }
+  .study-abroad-page-section .course-inner-gradient-bg-2 {
+    display: block;
+    top: 700px;
+    left: -240%;
+    background: radial-gradient(circle, hsla(0, 85%, 42%, 0.5), transparent);
+    z-index: -2;
+  }
+  .study-abroad-page-section .course-inner-gradient-bg-3 {
+    top: 600px;
+    left: 180%;
+    transform: translateX(-50%);
+    background: radial-gradient(circle, hsla(200, 94%, 39%, 0.5), transparent);
+    z-index: -1;
+  }
+  .study-abroad-page-section .course-inner-gradient-bg-4 {
+    top: 1200px;
+    right: -800px;
+    z-index: -1;
+  }
+  .study-abroad-page-section .course-inner-gradient-bg-5 {
+    display: block;
+    height: 1150px;
+    top: 2000px;
+    left: 70%;
+    opacity: 0.3;
+  }
+  .study-abroad-page-section .course-inner-gradient-bg-6 {
+    display: block;
+    height: 1100px;
+    top: 2300px;
+    opacity: 0.3;
+    background: radial-gradient(circle, hsla(278, 83%, 47%, 0.7), transparent);
+  }
+  .study-abroad-page-section .course-inner-gradient-bg-7 {
+    display: block;
+    top: 1600px;
+    background: radial-gradient(circle, hsla(200, 94%, 39%, 0.7), transparent);
+    opacity: 0.3;
+  }
+
+  .study-abroad-hero-title-wrapper {
+    margin-inline: auto;
+    padding: 0;
+    border: none;
+  }
+  .study-abroad-hero-decorations {
+    display: none;
+  }
+  .study-abroad-hero-title-wrapper h1 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .outline-icon {
+    width: 101px;
+    height: 40px;
+    top: -6px;
+    left: -7px;
+  }
+  .study-abroad-hero-image {
+    margin-top: 40px;
+    height: 200px;
+    grid-row-start: 2;
+  }
+  .study-abroad-hero-image img {
+    border-radius: 4px;
+  }
+  .study-abroad-hero-description {
+    text-align: justify;
+    line-height: 24px;
+  }
+  .apply-now-btn {
+    height: 40px;
+    margin: 40px auto 0;
+  }
+  .study-abroad-hero-stats {
+    padding-block: 0;
+    margin-top: 60px;
+    grid-template-columns: repeat(auto-fit, 271px);
+    gap: 10px;
+  }
+  .study-abroad-hero-stats::before,
+  .study-abroad-hero-stats::after {
+    display: none;
+  }
+  .study-abroad-hero-stat {
+    padding-block: 20px;
+  }
+  .study-abroad-hero-stat::before,
+  .study-abroad-hero-stat::after {
+    display: block;
+    border-radius: 4px;
+  }
+  .certificate-stat img {
+    width: 32px;
+  }
+  .study-abroad-hero-stat h3 {
+    margin-top: 5px;
+  }
+  .study-abroad-hero-stat p {
+    margin-top: 5px;
+    font-size: 18px;
+  }
+
+  .agenda-section {
+    margin-top: 60px;
+  }
+  .agenda-block {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  .agenda-swiper-navigation {
+    display: flex;
+  }
+  .agenda-day {
+    width: 113px;
+    height: 54px;
+    padding: 0 15px;
+    border-radius: 4px;
+  }
+  .agenda-day.gradient-bg::before,
+  .agenda-day.gradient-bg::after {
+    border-radius: 4px;
+  }
+  .agenda-day.active::after {
+    /* display: none; */
+    border: none;
+    opacity: 1;
+    border-bottom: 3px solid transparent;
+    background: linear-gradient(
+        to right,
+        var(--bg-blue-350),
+        var(--bg-pink-550),
+        var(--bg-red-650)
+      )
+      border-box;
+  }
+  .agenda-day p {
+    font-size: 20px;
+  }
+
+  .agenda-details {
+    padding: 20px 10px;
+    background-color: var(--bg-tertiary-color-5);
+  }
+  .agenda-details-content h2 {
+    text-align: center;
+    line-height: 32px;
+  }
+  .agenda-details-content h3 {
+    text-align: center;
+    font-size: 18px;
+  }
+  .agenda-text {
+    text-align: justify;
+  }
+  .agenda-image-wrapper {
+    max-width: 617px;
+    height: 180px;
+    margin-block: 20px;
+  }
+  .agenda-details-text-list li {
+    text-align: justify;
+  }
+
+  .study-abroad-instructors-section {
+    margin-top: 60px;
+  }
+  .study-abroad-instructors h2 {
+    font-size: 20px;
+  }
+  .study-abroad-partners-section {
+    margin-top: 60px;
+  }
+  .study-abroad-partners h2 {
+    font-size: 20px;
+  }
+  .study-abroad-partners .collaboration-list {
+    margin-top: 20px;
+  }
+
+  .program-related-course-section {
+    margin-top: 60px;
+  }
+  .program-related-course h2 {
+    font-size: 20px;
+  }
+  .program-related-video {
+    margin: 20px auto 0;
+    height: 200px;
+  }
+  .program-related-video .play-icon {
+    width: 40px;
+    height: 40px;
+  }
+  .program-related-video .play-icon img {
+    width: 15px;
+    height: 19px;
+  }
+  .program-related-course p {
+    text-align: justify;
+    line-height: 24px;
+  }
+  .program-related-actions {
+    margin-top: 20px;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .program-related-actions a {
+    height: 40px;
+    font-size: 16px;
+  }
 }
