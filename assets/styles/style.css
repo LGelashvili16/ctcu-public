@@ -15,7 +15,7 @@
   --color-red-600: #ef4444;
   --color-red-600-80: #ef4444cc;
 
-  --color-gold: #ffe2ac;
+  --color-gold: #ffa600;
   --color-gold-20: #ffa60033;
   --color-gold-30: hsla(30, 61%, 50%, 0.3);
   --color-gold-40: hsla(39, 100%, 50%, 0.4);
@@ -23,6 +23,7 @@
   --color-gold-80: hsla(39, 100%, 50%, 0.8);
   --color-gold-80: hsla(39, 100%, 50%, 0.8);
   --color-dark-gold-80: hsla(30, 61%, 50%, 0.8);
+  --color-gold2: #ffe2ac;
 
   --color-yellow-5: hsla(55, 86%, 49%, 0.05);
   --color-yellow-20: hsla(55, 86%, 49%, 0.2);
@@ -259,6 +260,13 @@ ul {
 }
 
 /* !Hover States */
+.click-btn {
+  transition: transform 0.2s;
+}
+.click-btn:active {
+  transform: scale(0.95);
+}
+
 .primary-btn {
   background-color: var(--color-primary-80);
   transition: background-color 0.2s;
@@ -331,6 +339,53 @@ ul {
 }
 .gradient-bg:hover::after {
   opacity: 0.9;
+}
+
+.card-gradient-bg {
+  width: 100%;
+  padding: 20px;
+  position: relative;
+  background-color: var(--bg-tertiary-color-5);
+  border-radius: 12px;
+}
+.card-gradient-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.05;
+  background: linear-gradient(
+    -89deg,
+    var(--bg-red-650),
+    var(--bg-pink-550) 50%,
+    var(--bg-blue-350)
+  );
+  border-radius: 12px;
+  z-index: -1;
+}
+.card-gradient-bg::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  opacity: 0.2;
+  background: linear-gradient(
+      -89deg,
+      var(--bg-red-650),
+      var(--bg-pink-550),
+      var(--bg-blue-350)
+    )
+    border-box;
+  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+  z-index: -1;
 }
 
 /* !Header */
@@ -4124,6 +4179,8 @@ li.terms-list-item::marker {
 .course-inner-details-section {
   margin-top: 20px;
   padding-inline: 24px;
+  position: relative;
+  overflow-x: clip;
 }
 
 .back-btn {
@@ -4821,7 +4878,7 @@ li.terms-list-item::marker {
   padding: 8px 16px;
   font-family: "Raleway";
   font-size: 14px;
-  color: var(--color-gold);
+  color: var(--color-gold2);
   background-color: var(--bg-black-840-50);
   backdrop-filter: blur(4px);
   border-radius: 6px;
@@ -7214,4 +7271,95 @@ li.terms-list-item::marker {
     height: 40px;
     font-size: 16px;
   }
+}
+
+/* !CART PAGE */
+.cart-back-section {
+  margin-top: 40px;
+}
+.cart-page-section {
+  margin-top: 40px;
+}
+.cart-page-content {
+  display: grid;
+  grid-template-columns: minmax(280px, 1fr) minmax(280px, 523px);
+  gap: 40px;
+}
+.cart-items-list h1 {
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.cart-items-group h3 {
+  margin-block: 40px 25px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+.cart-items-group-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.cart-group-item {
+  display: grid;
+  grid-template-columns: 184px auto 1fr;
+}
+.cart-group-item-image {
+  width: 184px;
+  height: 109px;
+}
+.cart-group-item-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  object-fit: cover;
+}
+.cart-group-item-details {
+  margin-left: 13px;
+}
+.cart-group-item-title {
+  font-size: 14px;
+  font-weight: 700;
+}
+.cart-group-item-title .cart-item-gold {
+  color: var(--color-gold);
+}
+.cart-group-item-description {
+  margin-top: 13px;
+  max-width: 307px;
+  font-size: 14px;
+  line-height: 24px;
+}
+.cart-group-item-price-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 23px;
+  justify-self: end;
+}
+.cart-item-prices {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 5px;
+}
+.cart-item-price {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-primary-color-90);
+}
+.cart-item-old-price {
+  font-size: 16px;
+  color: var(--text-primary-color-60);
+  text-decoration: line-through;
+}
+.remove-cart-group-item-btn {
+  display: grid;
+  place-content: center;
+  height: fit-content;
+  background-color: transparent;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
