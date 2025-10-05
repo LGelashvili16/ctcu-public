@@ -171,18 +171,14 @@ const handleProfileBtnDropdown = () => {
 
   btn &&
     document.addEventListener("click", (e) => {
-      console.log(e.target);
-      if (
-        e.target !== btn &&
-        !profileBtn.contains(e.target) &&
-        e.target !== profileDropdown &&
-        !profileDropdown.contains(e.target)
-      ) {
+      if (e.target === profileDropdown) return;
+
+      if (e.target !== btn && !profileBtn.contains(e.target)) {
         profileBtn.classList.remove("active");
         return;
-      } else {
-        profileBtn.classList.add("active");
       }
+
+      profileBtn.classList.toggle("active");
     });
 };
 handleProfileBtnDropdown();
