@@ -162,6 +162,31 @@ const handleMobileMenuBtn = () => {
 };
 handleMobileMenuBtn();
 
+const handleProfileBtnDropdown = () => {
+  const profileBtn = document.querySelector(".header-profile");
+  const profileDropdown = document.querySelector(
+    ".header-profile-dropdown-list"
+  );
+  const btn = profileBtn?.querySelector(".header-profile-btn");
+
+  btn &&
+    document.addEventListener("click", (e) => {
+      console.log(e.target);
+      if (
+        e.target !== btn &&
+        !profileBtn.contains(e.target) &&
+        e.target !== profileDropdown &&
+        !profileDropdown.contains(e.target)
+      ) {
+        profileBtn.classList.remove("active");
+        return;
+      } else {
+        profileBtn.classList.add("active");
+      }
+    });
+};
+handleProfileBtnDropdown();
+
 const handleMobileProfileDropdown = () => {
   const profileDropdown = document.querySelector(
     ".mobile-menu-profile-wrapper"

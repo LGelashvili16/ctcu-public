@@ -508,7 +508,7 @@ ul {
   box-shadow: 0 8px 12px 0 var(--bg-black-900-30);
   transition: all 0.3s ease;
 }
-.header-profile:hover .header-profile-dropdown {
+.header-profile.active .header-profile-dropdown {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
@@ -589,6 +589,9 @@ ul {
 }
 .header-profile-btn:hover {
   background-color: var(--bg-tertiary-color-20);
+}
+.header-profile-btn img {
+  /* pointer-events: none; */
 }
 
 .theme-toggle {
