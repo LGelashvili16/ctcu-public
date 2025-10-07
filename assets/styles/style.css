@@ -3325,6 +3325,12 @@ ul {
   flex-direction: column;
   gap: 20px;
 }
+.form-groups-flex {
+  display: flex;
+}
+.form-group {
+  width: 100%;
+}
 
 .form-group label {
   font-size: 18px;
@@ -7552,15 +7558,9 @@ li.terms-list-item::marker {
 .cart-background {
   display: none;
 }
-.cart-back-section {
-  margin-top: 40px;
-  padding-inline: 20px;
-}
 .cart-page-section {
   position: relative;
-  margin-top: 40px;
-  padding-bottom: 80px;
-  padding-inline: 20px;
+  padding: 40px 20px 80px;
   overflow: clip;
 }
 .cart-page-section .course-inner-gradient-bg-1 {
@@ -7584,6 +7584,7 @@ li.terms-list-item::marker {
 }
 
 .cart-page-content {
+  margin-top: 40px;
   display: grid;
   grid-template-columns: minmax(280px, 751px) minmax(280px, auto);
   gap: 40px;
@@ -7811,11 +7812,8 @@ li.terms-list-item::marker {
     object-fit: cover;
     z-index: -1;
   }
-  .cart-back-section {
-    margin-top: 20px;
-  }
   .cart-page-section {
-    padding-bottom: 60px;
+    padding-block: 20px 60px;
   }
   .cart-page-section .course-inner-gradient-bg-1,
   .cart-page-section .course-inner-gradient-bg-2,
