@@ -481,3 +481,46 @@ const handleAgendaTabs = () => {
   }
 };
 handleAgendaTabs();
+
+Toastify({
+  text: "This is a toast",
+  duration: 3000,
+  className: "toast-default",
+  // destination: "https://github.com/apvarun/toastify-js",
+  // newWindow: true,
+  close: true,
+  gravity: "top", // `top` or `bottom`
+  position: "center", // `left`, `center` or `right`
+  stopOnFocus: true, // Prevents dismissing of toast on hover
+  onClick: function () {}, // Callback after click
+}).showToast();
+
+// !Checkout Page
+
+const checkoutRadioSwitch = () => {
+  const invoiceRadioInputs = document.querySelectorAll(".payment-radio-input");
+  const downloadInvoiceBtn = document.querySelector(".download-invoice-btn");
+  const sendInvoiceBtn = document.querySelector(".send-invoice-btn");
+  const payBtn = document.querySelector(".pay-btn");
+
+  if (invoiceRadioInputs.length) {
+    invoiceRadioInputs.forEach((input) => {
+      input.addEventListener("change", () => {
+        if (input.checked && input.classList.contains("invoice-radio-input")) {
+          downloadInvoiceBtn.classList.add("active");
+          sendInvoiceBtn.classList.add("active");
+          payBtn.classList.remove("active");
+        }
+        if (
+          input.checked &&
+          input.classList.contains("credit-card-radio-input")
+        ) {
+          downloadInvoiceBtn.classList.remove("active");
+          sendInvoiceBtn.classList.remove("active");
+          payBtn.classList.add("active");
+        }
+      });
+    });
+  }
+};
+checkoutRadioSwitch();
