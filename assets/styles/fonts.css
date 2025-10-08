@@ -151,3 +151,15 @@
   font-style: normal;
   font-display: swap;
 }
+
+/* PPMonument */
+@font-face {
+  font-family: "PPMonument";
+  src: url("../fonts/pp-monument/PPMonumentExtended-Black.woff2")
+      format("woff2"),
+    url("../fonts/pp-monument/PPMonumentExtended-Black.woff") format("woff"),
+    url("../fonts/pp-monument/PPMonumentExtended-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
