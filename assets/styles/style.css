@@ -3349,6 +3349,73 @@ ul {
   font-size: 18px;
   color: var(--text-form-label-80);
 }
+
+.custom-select {
+  margin-top: 13px;
+  /* padding: 12px 20px 12px 12px; */
+}
+.custom-select-trigger {
+  position: relative;
+  padding: 12px 20px 12px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.custom-select-trigger h4 {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--text-primary-color-90);
+}
+.custom-select-trigger img {
+  display: block;
+  width: 16px;
+  transition: transform 0.2s;
+}
+.custom-select.open .custom-select-trigger::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    -67deg,
+    var(--bg-tertiary-color-10),
+    var(--bg-tertiary-color-20)
+  );
+  border-radius: 8px;
+  opacity: 1;
+  z-index: 2;
+  transition: opacity 0.2s;
+}
+.custom-select.open .custom-select-trigger img {
+  transform: rotate(180deg);
+}
+
+.custom-select-options {
+  /* padding: 12px 20px 12px 12px; */
+  display: flex;
+  flex-direction: column;
+  height: 0;
+  transition: height 0.2s ease;
+  overflow: hidden;
+}
+.custom-select-options li {
+  color: var(--text-primary-color-70);
+  background-color: transparent;
+  padding: 12px 20px 12px 12px;
+  transition: background-color 0.3s;
+}
+.custom-select-options li:hover {
+  background-color: var(--bg-tertiary-color-10);
+  cursor: pointer;
+}
+.custom-select-options li:last-child:hover {
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
 .form-radio-group {
   position: relative;
   display: flex;
@@ -3429,6 +3496,7 @@ ul {
     )
     border-box;
 }
+
 .input-text::placeholder {
   color: var(--text-form-placeholder-70);
 }
@@ -3491,6 +3559,23 @@ ul {
   /* transform: scale(0.95); */
 }
 
+.input-textarea {
+  margin-top: 13px;
+  padding: 16px 12px;
+  display: block;
+  background-color: transparent;
+  width: 100%;
+  min-height: 167px;
+  resize: none;
+  border: none;
+  outline: none;
+  font-family: "Montserrat";
+  font-size: 16px;
+}
+.input-textarea::placeholder {
+  color: var(--text-form-placeholder-70);
+}
+
 .terms-group .terms-label {
   margin-left: 8px;
   font-size: 15px;
@@ -3498,6 +3583,12 @@ ul {
 .terms-group .terms-label a {
   color: var(--color-primary-70);
   font-size: 15px;
+}
+
+.input-with-icon .asterisk-img {
+  position: absolute;
+  top: 10px;
+  right: 12px;
 }
 
 .form-group-error .input-text {
@@ -8296,5 +8387,68 @@ li.terms-list-item::marker {
   }
   .our-partners-content h2 {
     font-size: 24px;
+  }
+}
+
+/* !Contact Page */
+.contact-page-faq-section {
+  padding-inline: 24px;
+}
+.contact-faq {
+  max-width: 870px;
+}
+.contact-faq h1 {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 900;
+}
+
+.contact-help-section {
+  margin-block: 100px;
+  padding-inline: 24px;
+}
+
+.help-center-form {
+  max-width: 870px;
+  padding: 40px;
+}
+
+.help-center-form .form-btn {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-primary-color-80);
+}
+
+@media (max-width: 768px) {
+  .contact-faq h1 {
+    font-size: 24px;
+  }
+
+  .contact-page-faq-section .faq-accordion-block {
+    margin-top: 60px;
+  }
+  .contact-page-faq-section .accordion-block .accordion {
+    margin-top: 20px;
+  }
+  .contact-page-faq-section .accordion-button-text p,
+  .accordion-button-text span {
+    font-size: 16px;
+  }
+
+  .contact-help-section {
+    margin-block: 60px;
+  }
+  .contact-help-section .form-title {
+    margin-bottom: 20px;
+  }
+  .help-center-form {
+    padding: 20px 10px;
+  }
+  .contact-help-section .input-textarea {
+    min-height: 141px;
+  }
+  .help-center-form .form-btn {
+    font-size: 16px;
   }
 }

@@ -482,18 +482,18 @@ const handleAgendaTabs = () => {
 };
 handleAgendaTabs();
 
-Toastify({
-  text: "This is a toast",
-  duration: 3000,
-  className: "toast-default",
-  // destination: "https://github.com/apvarun/toastify-js",
-  // newWindow: true,
-  close: true,
-  gravity: "top", // `top` or `bottom`
-  position: "center", // `left`, `center` or `right`
-  stopOnFocus: true, // Prevents dismissing of toast on hover
-  onClick: function () {}, // Callback after click
-}).showToast();
+// Toastify({
+//   text: "This is a toast",
+//   duration: 3000,
+//   className: "toast-default",
+//   // destination: "https://github.com/apvarun/toastify-js",
+//   // newWindow: true,
+//   close: true,
+//   gravity: "top", // `top` or `bottom`
+//   position: "center", // `left`, `center` or `right`
+//   stopOnFocus: true, // Prevents dismissing of toast on hover
+//   onClick: function () {}, // Callback after click
+// }).showToast();
 
 // !Checkout Page
 
@@ -524,3 +524,34 @@ const checkoutRadioSwitch = () => {
   }
 };
 checkoutRadioSwitch();
+
+// !Contact Page
+
+const helpCenterSelect = () => {
+  const hiddenInput = document.querySelector(".topic-select-input");
+  const customSelect = document.querySelector(".custom-select");
+  const selectTrigger = customSelect?.querySelector(".custom-select-trigger");
+  const customSelectTitle = selectTrigger?.querySelector("h4");
+  const optionsContainer = customSelect?.querySelector(
+    ".custom-select-options"
+  );
+  const optionsList = optionsContainer?.querySelectorAll("li");
+
+  selectTrigger?.addEventListener("click", () => {
+    customSelect.classList.toggle("open");
+    optionsContainer.style.height = optionsContainer.scrollHeight + "px";
+    if (!customSelect.classList.contains("open")) {
+      optionsContainer.style.height = "0px";
+    }
+  });
+
+  optionsList?.forEach((option) => {
+    option.addEventListener("click", () => {
+      customSelectTitle.textContent = option.textContent;
+      hiddenInput.value = option.dataset.value;
+      customSelect.classList.remove("open");
+      optionsContainer.style.height = "0px";
+    });
+  });
+};
+helpCenterSelect();
