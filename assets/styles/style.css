@@ -295,6 +295,21 @@ ul {
   background-color: var(--color-primary);
 }
 
+.secondary-btn {
+  padding: 9px 10px;
+  background-color: var(--bg-tertiary-color-10);
+  border: 1px solid var(--border-primary-color-10);
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+.secondary-btn:hover {
+  background-color: var(--bg-tertiary-color-15);
+  border: 1px solid var(--border-primary-color-30);
+}
+
 .outline-btn {
   border: 1px solid var(--border-primary-color-50);
   border-radius: 8px;
@@ -5749,14 +5764,17 @@ li.terms-list-item::marker {
 }
 
 /* You May Also Like Swiper */
-#mayLikeSwiper {
+#mayLikeSwiper,
+#mayLikeSwiper2 {
   /* overflow: visible; */
   padding: 1px;
 }
-#mayLikeSwiper .swiper-slide {
+/* #mayLikeSwiper .swiper-slide,
+#mayLikeSwiper2 .swiper-slide {
   width: 410px;
-}
-#mayLikeSwiper .swiper-slide {
+} */
+#mayLikeSwiper .swiper-slide,
+#mayLikeSwiper2 .swiper-slide {
   position: relative;
   width: 410px;
   border-radius: 8px;
@@ -5768,7 +5786,8 @@ li.terms-list-item::marker {
   /* box-shadow: 0 0 0 1px var(--bg-tertiary-color-30); */
   transition: box-shadow 0.4s;
 }
-#mayLikeSwiper .swiper-slide::before {
+#mayLikeSwiper .swiper-slide::before,
+#mayLikeSwiper2 .swiper-slide::before {
   content: "";
   position: absolute;
   /* inset: 0; */
@@ -5985,14 +6004,16 @@ li.terms-list-item::marker {
   border-radius: 10px;
 }
 
-.may-like-swiper-scrollbar {
+.may-like-swiper-scrollbar,
+.may-like-swiper-scrollbar2 {
   position: static !important;
   height: 17px !important;
   border-radius: 12px;
   background-color: var(--bg-tertiary-color-10);
   box-shadow: 0 0 0 1px var(--bg-tertiary-color-10) inset;
 }
-.may-like-swiper-scrollbar .swiper-scrollbar-drag {
+.may-like-swiper-scrollbar .swiper-scrollbar-drag,
+.may-like-swiper-scrollbar2 .swiper-scrollbar-drag {
   background-color: var(--bg-tertiary-color-60);
   box-shadow: 0 0 0 1px var(--bg-tertiary-color) inset;
 }
@@ -8794,4 +8815,133 @@ li.terms-list-item::marker {
   .instructors-page-content h1::after {
     margin-top: 16px;
   }
+}
+
+/* !Instructor Inner Page */
+.instructor-inner-page-section {
+  position: relative;
+  overflow-x: clip;
+  padding: 100px 24px;
+}
+.instructor-inner-page-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.instructor-inner-content-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 300px minmax(272px, 972px) 1fr;
+  gap: 40px;
+  margin-inline: auto;
+}
+.instructor-profile-wrapper {
+  grid-column-start: 2;
+  grid-row: span 3;
+  position: relative;
+  height: 100%;
+}
+.instructor-profile-card {
+  padding: 24px;
+  position: sticky;
+  top: 81px;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: linear-gradient(
+    -39deg,
+    var(--bg-tertiary-color-5),
+    var(--bg-tertiary-color-15)
+  );
+  border-radius: 10px;
+}
+.instructor-profile-card::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: 11px;
+  border: 1px solid transparent;
+  background: linear-gradient(
+      -51deg,
+      var(--bg-tertiary-color-50),
+      var(--bg-tertiary-color-20)
+    )
+    border-box;
+  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+  z-index: -1;
+}
+
+.instructor-profile-image {
+  width: 100%;
+  height: 224px;
+}
+.instructor-profile-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+.instructor-social-link img {
+  width: auto;
+  height: 20px;
+}
+
+.instructor-texts-wrapper {
+  max-width: 972px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.instructor-texts-wrapper h1 {
+  font-size: 32px;
+  font-weight: 700;
+}
+.instructor-regalia-list {
+  display: flex;
+  gap: 10px;
+}
+.instructor-regalia-list p {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--color-primary);
+}
+.instructor-texts p {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.instructor-related-courses {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  margin-top: 100px;
+}
+.instructor-related-courses h3 {
+  font-family: "Inter";
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 40px;
+}
+.instructor-related-courses .may-also-like-swiper-wrapper {
+  /* max-width: 972px; */
+  width: 100%;
+}
+
+.instructor-related-events {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  margin-top: 100px;
+}
+.instructor-related-events h3 {
+  font-family: "Inter";
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 40px;
+}
+.instructor-related-events .may-also-like-swiper-wrapper {
+  /* max-width: 972px; */
+  width: 100%;
 }

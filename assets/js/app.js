@@ -87,6 +87,29 @@ const handleAllSwiperInit = () => {
         },
       },
     },
+    mayLikeSwiper2: {
+      slidesPerView: "auto",
+      spaceBetween: 20,
+      // centeredSlides: true,
+      speed: 700,
+      navigation: {
+        nextEl: ".may-like-swiper-button-next2",
+        prevEl: ".may-like-swiper-button-prev2",
+      },
+      scrollbar: {
+        el: ".may-like-swiper-scrollbar2",
+        draggable: true,
+        dragSize: 49,
+      },
+      breakpoints: {
+        768: {
+          spaceBetween: 40,
+          scrollbar: {
+            dragSize: 148,
+          },
+        },
+      },
+    },
     agendaDaysSwiper: {
       slidesPerView: "auto",
       spaceBetween: 20,
