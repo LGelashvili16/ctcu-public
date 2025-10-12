@@ -20,6 +20,7 @@ const handleAllSwiperInit = () => {
     },
     coursesSwiper: {
       // grabCursor: true,
+      // initialSlide: 2,
       slidesPerView: "auto",
       spaceBetween: 24,
       watchSlidesProgress: true,
@@ -46,6 +47,16 @@ const handleAllSwiperInit = () => {
       on: {
         init: (swiper) => {
           swiper.wrapperEl.style.width = `${swiper.wrapperEl.scrollWidth}px`;
+
+          const slideWidth = swiper.slides[0].offsetWidth;
+          // if (window.innerWidth >= 1024) {
+          //   // swiper.wrapperEl.style.marginLeft = `${slideWidth * 3}`;
+
+          //   swiper.wrapperEl.style.marginLeft = "20px";
+          //   if (swiper.activeIndex > 1) {
+          //     swiper.wrapperEl.style.marginLeft = "62px";
+          //   }
+          // }
         },
         slideChange: (swiper) => {
           // swiper.wrapperEl.style.width = `${swiper.wrapperEl.scrollWidth}px`;
@@ -53,7 +64,7 @@ const handleAllSwiperInit = () => {
           if (window.innerWidth >= 1024) {
             swiper.wrapperEl.style.marginLeft = "20px";
             if (swiper.activeIndex > 1) {
-              swiper.wrapperEl.style.marginLeft = "68px";
+              swiper.wrapperEl.style.marginLeft = "62px";
             }
             if (swiper.activeIndex === 0) {
               swiper.wrapperEl.style.marginLeft = "0";
