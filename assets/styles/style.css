@@ -6437,7 +6437,7 @@ li.terms-list-item::marker {
     width: 1400px;
     height: 733px;
     opacity: 0.4;
-    filter: blur(100px);
+    /* filter: blur(100px); */
   }
 
   .course-inner-gradient-bg-2 {
@@ -6445,7 +6445,7 @@ li.terms-list-item::marker {
     left: -100%;
     width: 1300px;
     height: 1050px;
-    filter: blur(100px);
+    /* filter: blur(100px); */
     z-index: -1;
   }
   .course-inner-gradient-bg-3 {
@@ -6453,7 +6453,7 @@ li.terms-list-item::marker {
     left: -70%;
     width: 1300px;
     height: 1150px;
-    filter: blur(100px);
+    /* filter: blur(100px); */
     z-index: -1;
   }
   .course-inner-gradient-bg-4 {
@@ -6462,7 +6462,7 @@ li.terms-list-item::marker {
     width: 600px;
     height: 1000px;
     opacity: 0.7;
-    filter: blur(100px);
+    /* filter: blur(100px); */
     z-index: -2;
   }
   .course-inner-gradient-bg-5 {
@@ -6481,7 +6481,7 @@ li.terms-list-item::marker {
     border-radius: 50%;
     background: radial-gradient(circle, #0681bf, transparent);
     opacity: 0.6;
-    filter: blur(100px);
+    /* filter: blur(100px); */
     z-index: -2;
   }
 }
