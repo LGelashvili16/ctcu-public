@@ -6479,7 +6479,7 @@ li.terms-list-item::marker {
     width: 1374px;
     height: 1675px;
     border-radius: 50%;
-    background: radial-gradient(circle, #0681bf, transparent);
+    background: radial-gradient(closes-side, #0681bf, transparent);
     opacity: 0.6;
     /* filter: blur(100px); */
     z-index: -2;
