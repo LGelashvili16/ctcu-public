@@ -3029,9 +3029,11 @@ ul {
     padding-top: 12px;
   }
   .event-card-texts h3 {
+    text-align: center;
     font-size: 18px;
   }
   .event-card-texts p {
+    text-align: center;
     font-size: 16px;
     -webkit-line-clamp: 4;
     line-clamp: 4;
@@ -3887,14 +3889,13 @@ li.terms-list-item::marker {
 }
 .courses-page-gradient-bg {
   position: absolute;
-  top: -50%;
-  left: 0;
-  transform: translateY(-10%);
-  width: 100%;
+  top: -575px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1740px;
   height: 1254px;
-  background: radial-gradient(circle, var(--color-primary), transparent);
-  opacity: 0.3;
-  filter: blur(40px);
+  background: radial-gradient(closest-side, var(--color-primary), transparent);
+  opacity: 0.4;
   z-index: -1;
 }
 
@@ -3933,10 +3934,12 @@ li.terms-list-item::marker {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 8px;
 }
 .courses-category a {
+  position: relative;
   font-size: 16px;
+  padding: 12px;
 }
 .courses-category a.active-category {
   position: relative;
@@ -3945,11 +3948,42 @@ li.terms-list-item::marker {
   color: var(--color-primary);
   background-color: var(--bg-black-800);
   border-radius: 4px;
-  --bg-blue-350: #12c2e9;
+  /* --bg-blue-350: #12c2e9;
   --bg-pink-550: #c471ed;
-  --bg-red-650: #f64f59;
+  --bg-red-650: #f64f59; */
 }
 .courses-category a.active-category::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 4px;
+  opacity: 0.5;
+  border: 2px solid transparent;
+  background: linear-gradient(
+      78deg,
+      var(--bg-blue-350),
+      var(--bg-pink-550),
+      var(--bg-red-650)
+    )
+    border-box;
+  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+}
+.courses-category a:hover {
+  position: relative;
+  border-radius: 4px;
+  background-color: var(--bg-tertiary-color-10);
+  transition: all 0.3s;
+}
+.courses-category a::after {
+  transition: all 0.3s;
+}
+.courses-category a:hover::after {
   content: "";
   position: absolute;
   top: 0;
@@ -3969,6 +4003,7 @@ li.terms-list-item::marker {
   -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: destination-out;
   mask-composite: exclude;
+  z-index: -1;
 }
 
 .courses-page-separator {
@@ -9108,5 +9143,57 @@ li.terms-list-item::marker {
     -webkit-line-clamp: 4;
     line-clamp: 4;
     line-height: normal;
+  }
+}
+
+/* !Events Page */
+.events-page-wrapper {
+  position: relative;
+  overflow-x: clip;
+  padding: 93px 24px 0;
+}
+.events-page-gradient-bg {
+  position: absolute;
+  top: -575px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1740px;
+  height: 1254px;
+  background: radial-gradient(closest-side, var(--color-primary), transparent);
+  opacity: 0.4;
+  z-index: -1;
+}
+
+.events-page-content h1 {
+  font-size: 24px;
+  font-weight: 700;
+}
+.events-page-content h1::after {
+  content: "";
+  margin-top: 20px;
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(
+    to bottom,
+    var(--bg-tertiary-color-30),
+    var(--bg-tertiary-color-50)
+  );
+  opacity: 0.4;
+}
+
+@media (max-width: 768px) {
+  .events-page-wrapper {
+    padding: 24px 24px 0;
+  }
+  .events-page-content h1 {
+    font-size: 20px;
+  }
+  .events-page-content h1::after {
+    margin-top: 16px;
+  }
+
+  .events-page-content .events-list {
+    margin-top: 20px;
   }
 }
