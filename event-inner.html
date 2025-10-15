@@ -275,6 +275,12 @@
 
     <main>
       <section class="event-details-section">
+        <img
+          src="./assets/images/common/background-blur-1.png"
+          alt=""
+          class="hero-background"
+        />
+
         <div class="container event-details-container">
           <div class="event-details-content">
             <div class="event-details-img">
@@ -355,6 +361,9 @@
               <h3 class="event-details-aside-title">Event</h3>
 
               <div class="event-details-aside-date">
+                <!-- Add 'show' class to show 'Out of Date'  -->
+                <p class="out-of-date show">Out of Date</p>
+
                 <span>24</span>
                 <span>AUG</span>
               </div>
@@ -365,14 +374,18 @@
                     src="./assets/images/icons/pin-white.png"
                     alt="pin icon"
                   />
-                  <span>888 street address, city, country</span>
+
+                  <!-- Add or remove 'line-through' class -->
+                  <span class="line-through"
+                    >888 street address, city, country</span
+                  >
                 </div>
                 <div class="event-details-aside-info-item">
                   <img
                     src="./assets/images/icons/persons.svg"
                     alt="persons icon"
                   />
-                  <span>200-250</span>
+                  <span class="line-through">200-250</span>
                 </div>
                 <div class="event-details-aside-info-item">
                   <p>
@@ -382,7 +395,7 @@
                     />
                     <span>warning</span>
                   </p>
-                  <span>Age Restriction</span>
+                  <span class="line-through">Age Restriction</span>
                 </div>
               </div>
 
@@ -829,169 +842,171 @@
       </section>
 
       <section class="event-page-collaboration">
-        <h2>Collaboration</h2>
+        <div class="container event-collaboration-container">
+          <h2>Collaboration</h2>
 
-        <div class="partners-list">
-          <div class="partners-list-item">
-            <div class="partners-list-item-content">
-              <img
-                src="./assets/images/logos/logo-1.png"
-                alt="company logo"
-                class="partner-company-logo"
-              />
-              <img
-                src="./assets/images/icons/arrow-top-right.svg"
-                alt="arrow icon"
-                class="top-right-arrow-icon"
-              />
+          <div class="partners-list">
+            <div class="partners-list-item">
+              <div class="partners-list-item-content">
+                <img
+                  src="./assets/images/logos/logo-1.png"
+                  alt="company logo"
+                  class="partner-company-logo"
+                />
+                <img
+                  src="./assets/images/icons/arrow-top-right.svg"
+                  alt="arrow icon"
+                  class="top-right-arrow-icon"
+                />
 
-              <h4 class="partner-company-name">Company Name</h4>
+                <h4 class="partner-company-name">Company Name</h4>
 
-              <div class="partners-item-additional-info">
-                <div>
-                  <div class="partners-list-item-flag">
-                    <p>UAE</p>
-                    <img
-                      src="./assets/images/icons/uae-flag.png"
-                      alt="uae flag"
-                    />
+                <div class="partners-item-additional-info">
+                  <div>
+                    <div class="partners-list-item-flag">
+                      <p>UAE</p>
+                      <img
+                        src="./assets/images/icons/uae-flag.png"
+                        alt="uae flag"
+                      />
+                    </div>
+
+                    <h4 class="partner-company-type">
+                      High education institution
+                    </h4>
                   </div>
-
-                  <h4 class="partner-company-type">
-                    High education institution
-                  </h4>
                 </div>
               </div>
             </div>
-          </div>
 
-          <div class="partners-list-item">
-            <div class="partners-list-item-content">
-              <img
-                src="./assets/images/logos/logo-2.png"
-                alt="company logo"
-                class="partner-company-logo"
-              />
-              <img
-                src="./assets/images/icons/arrow-top-right.svg"
-                alt="arrow icon"
-                class="top-right-arrow-icon"
-              />
+            <div class="partners-list-item">
+              <div class="partners-list-item-content">
+                <img
+                  src="./assets/images/logos/logo-2.png"
+                  alt="company logo"
+                  class="partner-company-logo"
+                />
+                <img
+                  src="./assets/images/icons/arrow-top-right.svg"
+                  alt="arrow icon"
+                  class="top-right-arrow-icon"
+                />
 
-              <h4 class="partner-company-name">Company Name</h4>
+                <h4 class="partner-company-name">Company Name</h4>
 
-              <div class="partners-item-additional-info">
-                <div>
-                  <div class="partners-list-item-flag">
-                    <p>UAE</p>
-                    <img
-                      src="./assets/images/icons/uae-flag.png"
-                      alt="uae flag"
-                    />
+                <div class="partners-item-additional-info">
+                  <div>
+                    <div class="partners-list-item-flag">
+                      <p>UAE</p>
+                      <img
+                        src="./assets/images/icons/uae-flag.png"
+                        alt="uae flag"
+                      />
+                    </div>
+
+                    <h4 class="partner-company-type">
+                      High education institution
+                    </h4>
                   </div>
-
-                  <h4 class="partner-company-type">
-                    High education institution
-                  </h4>
                 </div>
               </div>
             </div>
-          </div>
 
-          <div class="partners-list-item">
-            <div class="partners-list-item-content">
-              <img
-                src="./assets/images/logos/logo-3.png"
-                alt="company logo"
-                class="partner-company-logo"
-              />
-              <img
-                src="./assets/images/icons/arrow-top-right.svg"
-                alt="arrow icon"
-                class="top-right-arrow-icon"
-              />
+            <div class="partners-list-item">
+              <div class="partners-list-item-content">
+                <img
+                  src="./assets/images/logos/logo-3.png"
+                  alt="company logo"
+                  class="partner-company-logo"
+                />
+                <img
+                  src="./assets/images/icons/arrow-top-right.svg"
+                  alt="arrow icon"
+                  class="top-right-arrow-icon"
+                />
 
-              <h4 class="partner-company-name">Company Name</h4>
+                <h4 class="partner-company-name">Company Name</h4>
 
-              <div class="partners-item-additional-info">
-                <div>
-                  <div class="partners-list-item-flag">
-                    <p>UAE</p>
-                    <img
-                      src="./assets/images/icons/uae-flag.png"
-                      alt="uae flag"
-                    />
+                <div class="partners-item-additional-info">
+                  <div>
+                    <div class="partners-list-item-flag">
+                      <p>UAE</p>
+                      <img
+                        src="./assets/images/icons/uae-flag.png"
+                        alt="uae flag"
+                      />
+                    </div>
+
+                    <h4 class="partner-company-type">
+                      High education institution
+                    </h4>
                   </div>
-
-                  <h4 class="partner-company-type">
-                    High education institution
-                  </h4>
                 </div>
               </div>
             </div>
-          </div>
 
-          <div class="partners-list-item">
-            <div class="partners-list-item-content">
-              <img
-                src="./assets/images/logos/logo-4.png"
-                alt="company logo"
-                class="partner-company-logo"
-              />
-              <img
-                src="./assets/images/icons/arrow-top-right.svg"
-                alt="arrow icon"
-                class="top-right-arrow-icon"
-              />
+            <div class="partners-list-item">
+              <div class="partners-list-item-content">
+                <img
+                  src="./assets/images/logos/logo-4.png"
+                  alt="company logo"
+                  class="partner-company-logo"
+                />
+                <img
+                  src="./assets/images/icons/arrow-top-right.svg"
+                  alt="arrow icon"
+                  class="top-right-arrow-icon"
+                />
 
-              <h4 class="partner-company-name">Company Name</h4>
+                <h4 class="partner-company-name">Company Name</h4>
 
-              <div class="partners-item-additional-info">
-                <div>
-                  <div class="partners-list-item-flag">
-                    <p>UAE</p>
-                    <img
-                      src="./assets/images/icons/uae-flag.png"
-                      alt="uae flag"
-                    />
+                <div class="partners-item-additional-info">
+                  <div>
+                    <div class="partners-list-item-flag">
+                      <p>UAE</p>
+                      <img
+                        src="./assets/images/icons/uae-flag.png"
+                        alt="uae flag"
+                      />
+                    </div>
+
+                    <h4 class="partner-company-type">
+                      High education institution
+                    </h4>
                   </div>
-
-                  <h4 class="partner-company-type">
-                    High education institution
-                  </h4>
                 </div>
               </div>
             </div>
-          </div>
 
-          <div class="partners-list-item">
-            <div class="partners-list-item-content">
-              <img
-                src="./assets/images/logos/logo-5.png"
-                alt="company logo"
-                class="partner-company-logo"
-              />
-              <img
-                src="./assets/images/icons/arrow-top-right.svg"
-                alt="arrow icon"
-                class="top-right-arrow-icon"
-              />
+            <div class="partners-list-item">
+              <div class="partners-list-item-content">
+                <img
+                  src="./assets/images/logos/logo-5.png"
+                  alt="company logo"
+                  class="partner-company-logo"
+                />
+                <img
+                  src="./assets/images/icons/arrow-top-right.svg"
+                  alt="arrow icon"
+                  class="top-right-arrow-icon"
+                />
 
-              <h4 class="partner-company-name">Company Name</h4>
+                <h4 class="partner-company-name">Company Name</h4>
 
-              <div class="partners-item-additional-info">
-                <div>
-                  <div class="partners-list-item-flag">
-                    <p>UAE</p>
-                    <img
-                      src="./assets/images/icons/uae-flag.png"
-                      alt="uae flag"
-                    />
+                <div class="partners-item-additional-info">
+                  <div>
+                    <div class="partners-list-item-flag">
+                      <p>UAE</p>
+                      <img
+                        src="./assets/images/icons/uae-flag.png"
+                        alt="uae flag"
+                      />
+                    </div>
+
+                    <h4 class="partner-company-type">
+                      High education institution
+                    </h4>
                   </div>
-
-                  <h4 class="partner-company-type">
-                    High education institution
-                  </h4>
                 </div>
               </div>
             </div>
@@ -999,65 +1014,62 @@
         </div>
       </section>
 
-      <section class="event-collaboration-section">
-        <h2>TOP Instructors</h2>
+      <section class="event-speakers-section">
+        <div class="container event-speakers-container">
+          <h2>Event Speakers</h2>
 
-        <div class="container top-instructors-list">
-          <a href="./instructor-inner.html" class="top-instructor-card">
-            <img
-              src="./assets/images/home/instructor-1.png"
-              alt="instructor"
-              class="top-instructor-img"
-            />
-            <div class="top-instructor-texts">
-              <h3 class="top-instructor-name">Boris (Buba) Lezhava</h3>
-              <p class="top-instructor-title">Professor in Marketing</p>
-            </div>
-          </a>
+          <div class="container top-instructors-list">
+            <a href="./instructor-inner.html" class="top-instructor-card">
+              <img
+                src="./assets/images/home/instructor-1.png"
+                alt="instructor"
+                class="top-instructor-img"
+              />
+              <div class="top-instructor-texts">
+                <h3 class="top-instructor-name">Boris (Buba) Lezhava</h3>
+                <p class="top-instructor-title">Professor in Marketing</p>
+              </div>
+            </a>
 
-          <a href="./instructor-inner.html" class="top-instructor-card">
-            <img
-              src="./assets/images/home/instructor-2.png"
-              alt="instructor"
-              class="top-instructor-img"
-            />
-            <div class="top-instructor-texts">
-              <h3 class="top-instructor-name">Zaza Javelidze</h3>
-              <p class="top-instructor-title">Founder of Syntax Group</p>
-            </div>
-          </a>
+            <a href="./instructor-inner.html" class="top-instructor-card">
+              <img
+                src="./assets/images/home/instructor-2.png"
+                alt="instructor"
+                class="top-instructor-img"
+              />
+              <div class="top-instructor-texts">
+                <h3 class="top-instructor-name">Zaza Javelidze</h3>
+                <p class="top-instructor-title">Founder of Syntax Group</p>
+              </div>
+            </a>
 
-          <a href="./instructor-inner.html" class="top-instructor-card">
-            <img
-              src="./assets/images/home/instructor-3.png"
-              alt="instructor"
-              class="top-instructor-img"
-            />
-            <div class="top-instructor-texts">
-              <h3 class="top-instructor-name">Giorgi Beridze</h3>
-              <p class="top-instructor-title">ITIL Certified expert</p>
-            </div>
-          </a>
+            <a href="./instructor-inner.html" class="top-instructor-card">
+              <img
+                src="./assets/images/home/instructor-3.png"
+                alt="instructor"
+                class="top-instructor-img"
+              />
+              <div class="top-instructor-texts">
+                <h3 class="top-instructor-name">Giorgi Beridze</h3>
+                <p class="top-instructor-title">ITIL Certified expert</p>
+              </div>
+            </a>
 
-          <a href="./instructor-inner.html" class="top-instructor-card">
-            <img
-              src="./assets/images/home/instructor-4.png"
-              alt="instructor"
-              class="top-instructor-img"
-            />
-            <div class="top-instructor-texts">
-              <h3 class="top-instructor-name">Shota Chinchaladze</h3>
-              <p class="top-instructor-title">
-                Level C Certified Brand Architect
-              </p>
-            </div>
-          </a>
+            <a href="./instructor-inner.html" class="top-instructor-card">
+              <img
+                src="./assets/images/home/instructor-4.png"
+                alt="instructor"
+                class="top-instructor-img"
+              />
+              <div class="top-instructor-texts">
+                <h3 class="top-instructor-name">Shota Chinchaladze</h3>
+                <p class="top-instructor-title">
+                  Level C Certified Brand Architect
+                </p>
+              </div>
+            </a>
+          </div>
         </div>
-
-        <a href="./courses.html" class="all-instructors outline-btn2">
-          <span>All Instructors</span>
-          <img src="./assets/images/icons/arrow-right.png" alt="arrow" />
-        </a>
       </section>
 
       <section class="course-plans-section">
@@ -1095,37 +1107,6 @@
           </div>
 
           <div class="course-plan-list">
-            <div class="course-plan-list-item">
-              <input type="radio" name="course-plan" id="basic-plan" />
-              <label for="basic-plan" class="basic-plan-label">
-                <div class="course-plan-title">
-                  <div class="custom-radio"></div>
-                  <p>Basic</p>
-                </div>
-
-                <div class="course-plan-prices">
-                  <div class="course-plan-vat">
-                    <h5>VAT</h5>
-                    <p>7%</p>
-                  </div>
-
-                  <div class="course-plan-original">
-                    <h5>Original</h5>
-                    <p>$45,99</p>
-                  </div>
-
-                  <div class="course-plan-total">
-                    <h5>Total price</h5>
-
-                    <div class="course-plan-total-price">
-                      <img src="./assets/images/icons/aed.png" alt="aed" />
-                      <p>20,99</p>
-                    </div>
-                  </div>
-                </div>
-              </label>
-            </div>
-
             <div class="course-plan-list-item">
               <input
                 type="radio"
@@ -1229,6 +1210,150 @@
         </form>
       </section>
     </main>
+
+    <div class="modal" id="becomeSponsor">
+      <div class="modal-content">
+        <form
+          class="container event-speaker-form form-default-styles"
+          novalidate
+        >
+          <h2 class="form-title">Become a Sponsor</h2>
+
+          <div class="form-groups-wrapper">
+            <div class="form-group">
+              <label for="name">Representative Name</label>
+              <div class="input-with-icon">
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Enter your name"
+                  class="input-text"
+                  required=""
+                />
+                <img
+                  src="./assets/images/icons/Info-red.png"
+                  alt="info"
+                  class="info-red"
+                />
+              </div>
+              <p class="form-error-text">Please enter your name</p>
+            </div>
+
+            <div class="form-group">
+              <label for="lastname">Representative Last Name</label>
+              <div class="input-with-icon">
+                <input
+                  type="text"
+                  id="lastname"
+                  name="lastname"
+                  placeholder="Enter your Lastname"
+                  class="input-text"
+                  required=""
+                />
+                <img
+                  src="./assets/images/icons/Info-red.png"
+                  alt="info"
+                  class="info-red"
+                />
+              </div>
+              <p class="form-error-text">Please enter your lastname</p>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <div class="input-with-icon">
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Enter your email"
+                  class="input-text"
+                  required=""
+                />
+                <img
+                  src="./assets/images/icons/Info-red.png"
+                  alt="info"
+                  class="info-red"
+                />
+              </div>
+              <p class="form-error-text">Please enter valid email address</p>
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone number</label>
+              <div class="input-with-icon">
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="+1 000-000-0000"
+                  class="input-text"
+                  required=""
+                />
+                <img
+                  src="./assets/images/icons/Info-red.png"
+                  alt="info"
+                  class="info-red"
+                />
+              </div>
+              <p class="form-error-text">Please enter valid email address</p>
+            </div>
+
+            <div class="form-group">
+              <label for="companyName">Company Name</label>
+              <div class="input-with-icon">
+                <input
+                  type="text"
+                  id="companyName"
+                  name="companyName"
+                  placeholder="Enter company name"
+                  class="input-text"
+                  required=""
+                />
+                <img
+                  src="./assets/images/icons/Info-red.png"
+                  alt="info"
+                  class="info-red"
+                />
+              </div>
+              <p class="form-error-text">Please enter your company name</p>
+            </div>
+
+            <div class="form-group">
+              <label for="websiteLink">Website Link</label>
+              <div class="input-with-icon">
+                <input
+                  type="text"
+                  id="websiteLink"
+                  name="websiteLink"
+                  placeholder="Enter website link"
+                  class="input-text"
+                  required=""
+                />
+                <img
+                  src="./assets/images/icons/Info-red.png"
+                  alt="info"
+                  class="info-red"
+                />
+              </div>
+              <p class="form-error-text">Please enter your website link</p>
+            </div>
+
+            <div class="form-actions">
+              <button class="form-btn-cancel outline-btn">Cancel</button>
+              <button
+                type="submit"
+                class="form-btn form-btn-submit primary-btn"
+              >
+                <span>Submit</span>
+                <div class="loading-spinner"></div>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
 
     <footer class="footer">
       <div class="container footer-content-wrapper">

@@ -589,3 +589,20 @@ const helpCenterSelect = () => {
   });
 };
 helpCenterSelect();
+
+// !Event Inner Page
+
+const handleEventModals = () => {
+  const eventSpeakBtn = document.querySelector(".event-speak-btn");
+
+  if (eventSpeakBtn) {
+    eventSpeakBtn.addEventListener("click", () => {
+      console.log("hi");
+      const modal = document.getElementById("becomeSponsor");
+      if (modal) {
+        modal.classList.add("open");
+      }
+    });
+  }
+};
+handleEventModals();
