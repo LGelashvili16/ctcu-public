@@ -9358,6 +9358,10 @@ li.terms-list-item::marker {
   font-weight: 700;
 }
 
+.event-agenda-section {
+  margin-top: 56px;
+}
+
 @media (max-width: 768px) {
   .event-details-container {
     grid-template-columns: 1fr;
