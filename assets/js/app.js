@@ -597,8 +597,32 @@ const handleEventModals = () => {
 
   if (eventSpeakBtn) {
     eventSpeakBtn.addEventListener("click", () => {
-      console.log("hi");
-      const modal = document.getElementById("becomeSponsor");
+      const modal = document.querySelector("#becomeSpeaker");
+      const cancelBtn = modal.querySelector(".modal-cancel-btn");
+
+      document.body.classList.add("prevent-scroll");
+
+      cancelBtn.addEventListener("click", () => {
+        modal.classList.remove("open");
+        document.body.classList.remove("prevent-scroll");
+      });
+      if (modal) {
+        modal.classList.add("open");
+      }
+    });
+  }
+
+  const wantToSponsorBtn = document.querySelector(".event-sponsor-btn");
+  if (wantToSponsorBtn) {
+    wantToSponsorBtn.addEventListener("click", () => {
+      const modal = document.querySelector("#wantToSponsor");
+      const cancelBtn = modal.querySelector(".modal-cancel-btn");
+      document.body.classList.add("prevent-scroll");
+
+      cancelBtn.addEventListener("click", () => {
+        modal.classList.remove("open");
+        document.body.classList.remove("prevent-scroll");
+      });
       if (modal) {
         modal.classList.add("open");
       }
@@ -606,3 +630,62 @@ const handleEventModals = () => {
   }
 };
 handleEventModals();
+
+const handleFileUpload = (file, fileInput, uploadedFileDiv) => {
+  const fileNameEl = uploadedFileDiv.querySelector(".uploaded-file-name");
+  const removeBtn = uploadedFileDiv.querySelector(".remove-uploaded-file");
+  if (!fileNameEl || !removeBtn) return;
+
+  fileNameEl.textContent = file.name;
+
+  removeBtn.addEventListener("click", () => {
+    uploadedFileDiv.classList.remove("active");
+    fileNameEl.textContent = "";
+    fileInput.value = "";
+  });
+};
+
+const handleFileSelectAndDrop = () => {
+  const fileInput = document.querySelector("#fileUpload");
+  const selectBtn = document.querySelector(".select-file-btn");
+  const dropzone = document.querySelector(".file-dropzone");
+  const uploadedFileDiv = document.querySelector(".uploaded-file");
+
+  if (!fileInput || !selectBtn || !dropzone || !uploadedFileDiv) return;
+
+  selectBtn.addEventListener("click", () => {
+    fileInput.click();
+  });
+
+  fileInput.addEventListener("change", (e) => {
+    const file = e.target.files[0];
+    uploadedFileDiv.classList.add("active");
+    if (file) handleFileUpload(file, fileInput, uploadedFileDiv);
+  });
+
+  ["dragenter", "dragover"].forEach((eventName) => {
+    dropzone.addEventListener(eventName, (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      dropzone.classList.add("drag-over");
+    });
+  });
+
+  ["dragleave", "drop"].forEach((eventName) => {
+    dropzone.addEventListener(eventName, (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      dropzone.classList.remove("drag-over");
+    });
+  });
+
+  dropzone.addEventListener("drop", (e) => {
+    const file = e.dataTransfer.files[0];
+    if (file) {
+      fileInput.files = e.dataTransfer.files;
+      uploadedFileDiv.classList.add("active");
+      handleFileUpload(file, fileInput, uploadedFileDiv);
+    }
+  });
+};
+handleFileSelectAndDrop();

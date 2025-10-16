@@ -35,7 +35,7 @@
     <script src="./assets/js/app.js" defer></script>
   </head>
 
-  <body data-theme="dark">
+  <body data-theme="dark" class="prevent-scroll">
     <div class="whatsapp">
       <img src="./assets/images/icons/whatsapp.png" alt="whatsapp icon" />
     </div>
@@ -1211,147 +1211,422 @@
       </section>
     </main>
 
-    <div class="modal" id="becomeSponsor">
+    <div class="modal" id="becomeSpeaker">
       <div class="modal-content">
-        <form
-          class="container event-speaker-form form-default-styles"
-          novalidate
-        >
-          <h2 class="form-title">Become a Sponsor</h2>
+        <div class="form-wrapper">
+          <form
+            class="container event-speaker-form form-default-styles"
+            novalidate
+          >
+            <h2 class="form-title">Become a Sponsor</h2>
 
-          <div class="form-groups-wrapper">
-            <div class="form-group">
-              <label for="name">Representative Name</label>
-              <div class="input-with-icon">
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  placeholder="Enter your name"
-                  class="input-text"
-                  required=""
-                />
-                <img
-                  src="./assets/images/icons/Info-red.png"
-                  alt="info"
-                  class="info-red"
-                />
+            <div class="form-groups-wrapper">
+              <div class="form-group">
+                <label for="name">Representative Name</label>
+                <div class="input-with-icon">
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Enter your name"
+                    class="input-text"
+                    required=""
+                  />
+                  <img
+                    src="./assets/images/icons/Info-red.png"
+                    alt="info"
+                    class="info-red"
+                  />
+                  <img
+                    src="./assets/images/icons/asterisk.svg"
+                    alt="info"
+                    class="asterisk-img"
+                  />
+                </div>
+                <p class="form-error-text">Please enter your name</p>
               </div>
-              <p class="form-error-text">Please enter your name</p>
-            </div>
 
-            <div class="form-group">
-              <label for="lastname">Representative Last Name</label>
-              <div class="input-with-icon">
-                <input
-                  type="text"
-                  id="lastname"
-                  name="lastname"
-                  placeholder="Enter your Lastname"
-                  class="input-text"
-                  required=""
-                />
-                <img
-                  src="./assets/images/icons/Info-red.png"
-                  alt="info"
-                  class="info-red"
-                />
+              <div class="form-group">
+                <label for="lastname">Representative Last Name</label>
+                <div class="input-with-icon">
+                  <input
+                    type="text"
+                    id="lastname"
+                    name="lastname"
+                    placeholder="Enter your Lastname"
+                    class="input-text"
+                    required=""
+                  />
+                  <img
+                    src="./assets/images/icons/Info-red.png"
+                    alt="info"
+                    class="info-red"
+                  />
+                  <img
+                    src="./assets/images/icons/asterisk.svg"
+                    alt="info"
+                    class="asterisk-img"
+                  />
+                </div>
+                <p class="form-error-text">Please enter your lastname</p>
               </div>
-              <p class="form-error-text">Please enter your lastname</p>
-            </div>
 
-            <div class="form-group">
-              <label for="email">Email</label>
-              <div class="input-with-icon">
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="Enter your email"
-                  class="input-text"
-                  required=""
-                />
-                <img
-                  src="./assets/images/icons/Info-red.png"
-                  alt="info"
-                  class="info-red"
-                />
+              <div class="form-group">
+                <label for="email">Email</label>
+                <div class="input-with-icon">
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    class="input-text"
+                    required=""
+                  />
+                  <img
+                    src="./assets/images/icons/Info-red.png"
+                    alt="info"
+                    class="info-red"
+                  />
+                  <img
+                    src="./assets/images/icons/asterisk.svg"
+                    alt="info"
+                    class="asterisk-img"
+                  />
+                </div>
+                <p class="form-error-text">Please enter valid email address</p>
               </div>
-              <p class="form-error-text">Please enter valid email address</p>
-            </div>
 
-            <div class="form-group">
-              <label for="phone">Phone number</label>
-              <div class="input-with-icon">
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  placeholder="+1 000-000-0000"
-                  class="input-text"
-                  required=""
-                />
-                <img
-                  src="./assets/images/icons/Info-red.png"
-                  alt="info"
-                  class="info-red"
-                />
+              <div class="form-group">
+                <label for="phone">Phone number</label>
+                <div class="input-with-icon">
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="+1 000-000-0000"
+                    class="input-text"
+                    required=""
+                  />
+                  <img
+                    src="./assets/images/icons/Info-red.png"
+                    alt="info"
+                    class="info-red"
+                  />
+                  <img
+                    src="./assets/images/icons/asterisk.svg"
+                    alt="info"
+                    class="asterisk-img"
+                  />
+                </div>
+                <p class="form-error-text">Please enter valid email address</p>
               </div>
-              <p class="form-error-text">Please enter valid email address</p>
-            </div>
 
-            <div class="form-group">
-              <label for="companyName">Company Name</label>
-              <div class="input-with-icon">
-                <input
-                  type="text"
-                  id="companyName"
-                  name="companyName"
-                  placeholder="Enter company name"
-                  class="input-text"
-                  required=""
-                />
-                <img
-                  src="./assets/images/icons/Info-red.png"
-                  alt="info"
-                  class="info-red"
-                />
+              <div class="form-group">
+                <label for="companyName">Company Name</label>
+                <div class="input-with-icon">
+                  <input
+                    type="text"
+                    id="companyName"
+                    name="companyName"
+                    placeholder="Enter company name"
+                    class="input-text"
+                    required=""
+                  />
+                  <img
+                    src="./assets/images/icons/Info-red.png"
+                    alt="info"
+                    class="info-red"
+                  />
+                  <img
+                    src="./assets/images/icons/asterisk.svg"
+                    alt="info"
+                    class="asterisk-img"
+                  />
+                </div>
+                <p class="form-error-text">Please enter your company name</p>
               </div>
-              <p class="form-error-text">Please enter your company name</p>
-            </div>
 
-            <div class="form-group">
-              <label for="websiteLink">Website Link</label>
-              <div class="input-with-icon">
-                <input
-                  type="text"
-                  id="websiteLink"
-                  name="websiteLink"
-                  placeholder="Enter website link"
-                  class="input-text"
-                  required=""
-                />
-                <img
-                  src="./assets/images/icons/Info-red.png"
-                  alt="info"
-                  class="info-red"
-                />
+              <div class="form-group">
+                <label for="websiteLink">Website Link</label>
+                <div class="input-with-icon">
+                  <input
+                    type="text"
+                    id="websiteLink"
+                    name="websiteLink"
+                    placeholder="Enter website link"
+                    class="input-text"
+                    required=""
+                  />
+                  <img
+                    src="./assets/images/icons/Info-red.png"
+                    alt="info"
+                    class="info-red"
+                  />
+                  <img
+                    src="./assets/images/icons/asterisk.svg"
+                    alt="info"
+                    class="asterisk-img"
+                  />
+                </div>
+                <p class="form-error-text">Please enter your website link</p>
               </div>
-              <p class="form-error-text">Please enter your website link</p>
-            </div>
 
-            <div class="form-actions">
-              <button class="form-btn-cancel outline-btn">Cancel</button>
-              <button
-                type="submit"
-                class="form-btn form-btn-submit primary-btn"
-              >
-                <span>Submit</span>
-                <div class="loading-spinner"></div>
-              </button>
+              <div class="form-actions">
+                <button type="button" class="modal-cancel-btn outline-btn">
+                  Cancel
+                </button>
+                <button
+                  type="submit"
+                  class="form-btn form-btn-submit primary-btn"
+                >
+                  <span>Submit</span>
+                  <div class="loading-spinner"></div>
+                </button>
+              </div>
             </div>
-          </div>
-        </form>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal open" id="wantToSponsor">
+      <div class="modal-content">
+        <div class="form-wrapper">
+          <form
+            class="container event-speaker-form form-default-styles"
+            novalidate
+          >
+            <h2 class="form-title">Become a Speaker</h2>
+
+            <div class="form-groups-wrapper">
+              <div class="form-group">
+                <label for="name">Representative Name</label>
+                <div class="input-with-icon">
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Enter your name"
+                    class="input-text"
+                    required=""
+                  />
+                  <img
+                    src="./assets/images/icons/Info-red.png"
+                    alt="info"
+                    class="info-red"
+                  />
+                  <img
+                    src="./assets/images/icons/asterisk.svg"
+                    alt="info"
+                    class="asterisk-img"
+                  />
+                </div>
+                <p class="form-error-text">Please enter your name</p>
+              </div>
+
+              <div class="form-group">
+                <label for="lastname">Representative Last Name</label>
+                <div class="input-with-icon">
+                  <input
+                    type="text"
+                    id="lastname"
+                    name="lastname"
+                    placeholder="Enter your Lastname"
+                    class="input-text"
+                    required=""
+                  />
+                  <img
+                    src="./assets/images/icons/Info-red.png"
+                    alt="info"
+                    class="info-red"
+                  />
+                  <img
+                    src="./assets/images/icons/asterisk.svg"
+                    alt="info"
+                    class="asterisk-img"
+                  />
+                </div>
+                <p class="form-error-text">Please enter your lastname</p>
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email</label>
+                <div class="input-with-icon">
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    class="input-text"
+                    required=""
+                  />
+                  <img
+                    src="./assets/images/icons/Info-red.png"
+                    alt="info"
+                    class="info-red"
+                  />
+                  <img
+                    src="./assets/images/icons/asterisk.svg"
+                    alt="info"
+                    class="asterisk-img"
+                  />
+                </div>
+                <p class="form-error-text">Please enter valid email address</p>
+              </div>
+
+              <div class="form-group">
+                <label for="phone">Phone number</label>
+                <div class="input-with-icon">
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="+1 000-000-0000"
+                    class="input-text"
+                    required=""
+                  />
+                  <img
+                    src="./assets/images/icons/Info-red.png"
+                    alt="info"
+                    class="info-red"
+                  />
+                  <img
+                    src="./assets/images/icons/asterisk.svg"
+                    alt="info"
+                    class="asterisk-img"
+                  />
+                </div>
+                <p class="form-error-text">Please enter valid email address</p>
+              </div>
+
+              <div class="form-group">
+                <label for="companyName">Company Name</label>
+                <div class="input-with-icon">
+                  <input
+                    type="text"
+                    id="companyName"
+                    name="companyName"
+                    placeholder="Enter company name"
+                    class="input-text"
+                    required=""
+                  />
+                  <img
+                    src="./assets/images/icons/Info-red.png"
+                    alt="info"
+                    class="info-red"
+                  />
+                  <img
+                    src="./assets/images/icons/asterisk.svg"
+                    alt="info"
+                    class="asterisk-img"
+                  />
+                </div>
+                <p class="form-error-text">Please enter your company name</p>
+              </div>
+
+              <div class="form-group">
+                <label for="websiteLink">Subject of Speech</label>
+                <div class="input-with-icon">
+                  <textarea
+                    name="question"
+                    id="question"
+                    placeholder="Please describe subject of your speech "
+                    class="input-textarea"
+                    required=""
+                  ></textarea>
+                  <img
+                    src="./assets/images/icons/Info-red.png"
+                    alt="info"
+                    class="info-red"
+                  />
+                  <img
+                    src="./assets/images/icons/asterisk.svg"
+                    alt="info"
+                    class="asterisk-img"
+                  />
+                </div>
+                <p class="form-error-text">
+                  Please enter your subject of speech
+                </p>
+              </div>
+
+              <div class="form-group file-dropzone-group">
+                <div class="input-with-icon">
+                  <div class="file-upload-wrapper">
+                    <div class="file-dropzone">
+                      <label for="fileUpload" class="file-input-label">
+                        <img
+                          src="./assets/images/icons/files.svg"
+                          alt="upload icon"
+                        />
+                        <p class="file-dropzone-upload-text">Upload your CV</p>
+                        <p class="file-dropzone-drop-text">Drop here or</p>
+                      </label>
+
+                      <div class="upload-btn-wrapper">
+                        <button
+                          type="button"
+                          class="select-file-btn outline-btn"
+                        >
+                          Select File
+                        </button>
+                        <input
+                          type="file"
+                          id="fileUpload"
+                          name="fileUpload"
+                          class="file-input"
+                          required
+                        />
+                      </div>
+                    </div>
+
+                    <img
+                      src="./assets/images/icons/Info-red.png"
+                      alt="info"
+                      class="info-red"
+                    />
+                    <img
+                      src="./assets/images/icons/asterisk.svg"
+                      alt="info"
+                      class="asterisk-img"
+                    />
+                  </div>
+
+                  <div class="uploaded-file">
+                    <div>
+                      <img
+                        src="./assets/images/icons/file-blue.svg"
+                        alt="file"
+                      />
+                      <p class="uploaded-file-name">resume.pdf</p>
+                    </div>
+
+                    <button type="button" class="remove-uploaded-file">
+                      <img
+                        src="./assets/images/icons/x.svg"
+                        alt="remove file"
+                      />
+                    </button>
+                  </div>
+                </div>
+                <p class="form-error-text">Please upload your resume</p>
+              </div>
+
+              <div class="form-actions">
+                <button type="button" class="modal-cancel-btn outline-btn">
+                  Cancel
+                </button>
+                <button
+                  type="submit"
+                  class="form-btn form-btn-submit primary-btn"
+                >
+                  <span>Submit</span>
+                  <div class="loading-spinner"></div>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
 
