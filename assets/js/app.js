@@ -144,6 +144,15 @@ const handleAllSwiperInit = () => {
         },
       },
     },
+    newInnerSwiper: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      speed: 700,
+      navigation: {
+        nextEl: ".news-swiper-button-next",
+        prevEl: ".news-swiper-button-prev",
+      },
+    },
   };
 
   for (swiperId in swiperConfigs) {
