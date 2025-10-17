@@ -242,6 +242,7 @@ ul {
 .form-wrapper {
   height: 100%;
   overflow-y: auto;
+  overflow-x: hidden;
 }
 .form-wrapper::-webkit-scrollbar {
   width: 0;
