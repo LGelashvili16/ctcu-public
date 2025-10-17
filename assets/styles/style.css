@@ -138,6 +138,7 @@
   --border-toggle-dark: #7e51ad;
 
   --shadow-primary-50: hsla(0, 0%, 0%, 0.5);
+  --shadow-primary-30: hsla(0, 0%, 0%, 0.3);
   --shadow-primary-60: #00000099;
   --shadow-white-8: #ffffff14;
   --shadow-white-10: #ffffff1a;
@@ -2543,8 +2544,7 @@ ul {
   }
 }
 
-/* !Stay Abroad Home */
-
+/* !Study Abroad Home */
 .study-abroad-section {
   padding-inline: 24px;
 }
@@ -2930,7 +2930,6 @@ ul {
 }
 
 /* !Top Instructors Home */
-
 .top-instructors-section {
   position: relative;
   padding-inline: 24px;
@@ -8074,6 +8073,332 @@ li.terms-list-item::marker {
   }
 }
 
+/* !Study Abroad Program */
+.study-abroad-program-section {
+  position: relative;
+  padding: 100px 24px 100px;
+  overflow-x: clip;
+}
+
+.study-abroad-program-section .gradient-bg-cyan,
+.study-abroad-program-section .gradient-bg-red-2,
+.study-abroad-program-section .gradient-bg-pink-2,
+.study-abroad-program-section .gradient-bg-cyan-3 {
+  display: none;
+}
+.study-abroad-program-section .gradient-bg-red {
+  display: none;
+  top: -150px;
+  left: -40%;
+  background: radial-gradient(
+    closest-side,
+    hsla(0, 85%, 42%, 0.7),
+    transparent
+  );
+}
+.study-abroad-program-section .gradient-bg-cyan-2 {
+  top: -300px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: radial-gradient(
+    closest-side,
+    hsla(200, 94%, 39%, 0.5),
+    transparent
+  );
+}
+.study-abroad-program-section .gradient-bg-pink {
+  top: 251px;
+  right: -600px;
+  width: 1000px;
+  height: 1000px;
+  background: radial-gradient(
+    closest-side,
+    hsla(278, 83%, 47%, 0.5),
+    transparent
+  );
+}
+
+.study-abroad-program-hero {
+  position: relative;
+  height: 491px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 50px 0 var(--shadow-primary-30) inset;
+  border-radius: 18px;
+}
+.clouds-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 18px;
+  opacity: 0.5;
+  z-index: -1;
+}
+.plane-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  animation: subtleFlight 4s ease-in-out infinite alternate;
+}
+.study-abroad-program-hero h1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 140px;
+  font-weight: 900;
+  gap: 67px;
+}
+.study-abroad-program-hero h1 span:first-child {
+  color: var(--color-primary);
+  z-index: 1;
+}
+.study-abroad-program-hero h1 span:last-child {
+  z-index: 3;
+}
+
+.study-abroad-program-description {
+  margin: 20px auto 0;
+  max-width: 860px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 32px;
+  color: var(--text-primary-color-50);
+}
+
+.study-abroad-related-list {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(272px, 411px));
+  gap: 39px;
+}
+.study-abroad-card {
+  width: max(272px, 410px);
+  padding: 24px;
+  position: relative;
+  border-radius: 12px;
+  background-color: var(--bg-tertiary-color-10);
+  transition: background-color 0.2s, box-shadow 0.2s;
+}
+.study-abroad-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  background: linear-gradient(
+      -39deg,
+      var(--bg-tertiary-color-10),
+      var(--bg-tertiary-color-40)
+    )
+    border-box;
+  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+}
+.study-abroad-card:hover {
+  background-color: var(--bg-tertiary-color-15);
+  box-shadow: 0 0 30px 0 var(--shadow-white-10);
+}
+.study-abroad-card-img-wrapper {
+  margin-inline: auto;
+  width: fit-content;
+  position: relative;
+}
+.study-abroad-card-img {
+  position: relative;
+  width: max(224px, 363px);
+  height: 269px;
+  object-fit: cover;
+  display: block;
+  border-radius: 8px;
+}
+.study-abroad-card-logos {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.study-abroad-card-logo-img {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  border: 1px solid var(--border-primary-color-40);
+  background-color: var(--bg-quaternary-color-50);
+  backdrop-filter: blur(4px);
+}
+.study-abroad-card-logo-img img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  border-radius: 50%;
+  border: 1px solid var(--color-primary);
+}
+.study-abroad-card-logo-img span {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.study-abroad-card-logo-img:hover {
+  width: fit-content;
+}
+.study-abroad-card-logo-img:hover span {
+  position: static;
+  opacity: 1;
+}
+
+.study-abroad-card-tag {
+  padding: 10px 17px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  bottom: 25px;
+  transform: translateX(-50%);
+  border-radius: 8px;
+  background-color: var(--bg-quaternary-color-50);
+  backdrop-filter: blur(4px);
+}
+.study-abroad-card-details {
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+}
+.study-abroad-card-texts h3 {
+  font-weight: 500;
+  font-size: 20px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.study-abroad-card-texts p {
+  margin-top: 10px;
+  font-size: 18px;
+  color: var(--text-primary-color-60);
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  line-clamp: 5;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+@keyframes subtleFlight {
+  0% {
+    transform: translate(-50%, -50%) translateY(0) rotate(0deg);
+  }
+  10% {
+    transform: translate(-50%, -50%) translateY(-5px) rotate(-0.1deg);
+  }
+  15% {
+    transform: translate(-50%, -50%) translateY(-5px) rotate(0.2deg);
+  }
+  25% {
+    transform: translate(-50%, -50%) translateY(-5px) rotate(0.5deg);
+  }
+  50% {
+    transform: translate(-50%, -50%) translateY(0) rotate(0deg);
+  }
+  65% {
+    transform: translate(-50%, -50%) translateY(5px) rotate(-0.8deg);
+  }
+  75% {
+    transform: translate(-50%, -50%) translateY(5px) rotate(-1deg);
+  }
+  85% {
+    transform: translate(-50%, -50%) translateY(5px) rotate(-0.7deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) translateY(0) rotate(0deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .study-abroad-program-section .gradient-bg-cyan {
+    top: 693px;
+    height: 533px;
+    display: block;
+    z-index: -3;
+    opacity: 0.3;
+  }
+  .study-abroad-program-section .gradient-bg-red {
+    display: block;
+    top: 700px;
+    left: -240%;
+    background: radial-gradient(
+      closest-side,
+      hsla(0, 85%, 42%, 0.4),
+      transparent
+    );
+    z-index: -2;
+    opacity: 0.3;
+  }
+  .study-abroad-program-section .gradient-bg-cyan-2 {
+    top: 600px;
+    left: 180%;
+    transform: translateX(-50%);
+    background: radial-gradient(
+      closest-side,
+      hsla(200, 94%, 39%, 0.5),
+      transparent
+    );
+    z-index: -1;
+  }
+  .study-abroad-program-section .gradient-bg-pink {
+    top: 1200px;
+    right: -800px;
+    z-index: -1;
+  }
+  .study-abroad-program-section .gradient-bg-red-2 {
+    display: block;
+    height: 1150px;
+    top: 2000px;
+    left: 70%;
+    opacity: 0.3;
+  }
+  .study-abroad-program-section .gradient-bg-pink-2 {
+    display: block;
+    height: 1100px;
+    top: 2300px;
+    opacity: 0.3;
+    background: radial-gradient(
+      closest-side,
+      hsla(278, 83%, 47%, 0.7),
+      transparent
+    );
+  }
+  .study-abroad-program-section .gradient-bg-cyan-3 {
+    display: block;
+    top: 1600px;
+    background: radial-gradient(
+      closest-side,
+      hsla(200, 94%, 39%, 0.7),
+      transparent
+    );
+    opacity: 0.3;
+  }
+}
+
 /* !CART PAGE */
 .cart-background {
   display: none;
@@ -10073,6 +10398,5 @@ li.terms-list-item::marker {
   }
   .news-read-more-section .news-section-list {
     margin-top: 20px;
-
-}
+  }
 }
