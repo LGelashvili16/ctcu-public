@@ -35,7 +35,7 @@
     <script src="./assets/js/app.js" defer></script>
   </head>
 
-  <body data-theme="dark" class="prevent-scroll">
+  <body data-theme="dark">
     <div class="whatsapp">
       <img src="./assets/images/icons/whatsapp.png" alt="whatsapp icon" />
     </div>
@@ -301,14 +301,20 @@
                   <span>I want to attend</span>
                   <img src="./assets/images/icons/tag.svg" alt="tag icon" />
                 </button>
-                <button class="event-speak-btn primary-btn">
+                <button
+                  class="event-speak-btn primary-btn"
+                  data-modal-open="becomeSpeaker"
+                >
                   <span>I want to speak</span>
                   <img
                     src="./assets/images/icons/mic.svg"
                     alt="microphone icon"
                   />
                 </button>
-                <button class="event-sponsor-btn primary-btn">
+                <button
+                  class="event-sponsor-btn primary-btn"
+                  data-modal-open="wantToSponsor"
+                >
                   <span>I want to sponsor</span>
                   <img src="./assets/images/icons/star.svg" alt="star icon" />
                 </button>
@@ -1215,7 +1221,7 @@
       <div class="modal-content">
         <div class="form-wrapper">
           <form
-            class="container event-speaker-form form-default-styles"
+            class="container event-modal-form form-default-styles"
             novalidate
           >
             <h2 class="form-title">Become a Sponsor</h2>
@@ -1372,7 +1378,11 @@
               </div>
 
               <div class="form-actions">
-                <button type="button" class="modal-cancel-btn outline-btn">
+                <button
+                  type="button"
+                  class="modal-cancel-btn outline-btn"
+                  data-modal-close
+                >
                   Cancel
                 </button>
                 <button
@@ -1389,11 +1399,11 @@
       </div>
     </div>
 
-    <div class="modal open" id="wantToSponsor">
+    <div class="modal" id="wantToSponsor">
       <div class="modal-content">
         <div class="form-wrapper">
           <form
-            class="container event-speaker-form form-default-styles"
+            class="container event-modal-form form-default-styles"
             novalidate
           >
             <h2 class="form-title">Become a Speaker</h2>
@@ -1613,7 +1623,11 @@
               </div>
 
               <div class="form-actions">
-                <button type="button" class="modal-cancel-btn outline-btn">
+                <button
+                  type="button"
+                  class="modal-cancel-btn outline-btn"
+                  data-modal-close
+                >
                   Cancel
                 </button>
                 <button

@@ -591,45 +591,42 @@ const helpCenterSelect = () => {
 helpCenterSelect();
 
 // !Event Inner Page
+const handleModals = () => {
+  let mouseDownTarget = null;
 
-const handleEventModals = () => {
-  const eventSpeakBtn = document.querySelector(".event-speak-btn");
+  document.addEventListener("mousedown", (e) => {
+    mouseDownTarget = e.target;
+  });
 
-  if (eventSpeakBtn) {
-    eventSpeakBtn.addEventListener("click", () => {
-      const modal = document.querySelector("#becomeSpeaker");
-      const cancelBtn = modal.querySelector(".modal-cancel-btn");
+  // document.addEventListener("touchstart", (e) => {
+  //   mouseDownTarget = e.target;
+  // });
 
+  document.addEventListener("click", (e) => {
+    const modalOpenTrigger = e.target.closest("[data-modal-open]");
+
+    if (modalOpenTrigger) {
+      const targetId = modalOpenTrigger.getAttribute("data-modal-open");
+      const modalEl = document.getElementById(targetId);
+      if (modalEl) modalEl.classList.add("open");
       document.body.classList.add("prevent-scroll");
+      return;
+    }
 
-      cancelBtn.addEventListener("click", () => {
-        modal.classList.remove("open");
-        document.body.classList.remove("prevent-scroll");
-      });
-      if (modal) {
-        modal.classList.add("open");
-      }
-    });
-  }
+    if (e.target.matches("[data-modal-close]")) {
+      const modalEl = e.target.closest(".modal");
+      if (modalEl) modalEl.classList.remove("open");
+      document.body.classList.remove("prevent-scroll");
+      return;
+    }
 
-  const wantToSponsorBtn = document.querySelector(".event-sponsor-btn");
-  if (wantToSponsorBtn) {
-    wantToSponsorBtn.addEventListener("click", () => {
-      const modal = document.querySelector("#wantToSponsor");
-      const cancelBtn = modal.querySelector(".modal-cancel-btn");
-      document.body.classList.add("prevent-scroll");
-
-      cancelBtn.addEventListener("click", () => {
-        modal.classList.remove("open");
-        document.body.classList.remove("prevent-scroll");
-      });
-      if (modal) {
-        modal.classList.add("open");
-      }
-    });
-  }
+    if (e.target.classList.contains("modal") && mouseDownTarget === e.target) {
+      e.target.classList.remove("open");
+      document.body.classList.remove("prevent-scroll");
+    }
+  });
 };
-handleEventModals();
+handleModals();
 
 const handleFileUpload = (file, fileInput, uploadedFileDiv) => {
   const fileNameEl = uploadedFileDiv.querySelector(".uploaded-file-name");

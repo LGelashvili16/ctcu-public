@@ -262,7 +262,7 @@ ul {
   visibility: hidden;
   pointer-events: none;
   z-index: -10;
-  transition: all 0.4s ease;
+  /* transition: all 0.4s ease; */
 }
 .modal.open {
   display: flex;
@@ -467,6 +467,10 @@ ul {
   .whatsapp img {
     width: 34px;
     height: 34px;
+  }
+
+  .modal-content {
+    padding: 60px 24px;
   }
 }
 
@@ -9425,8 +9429,9 @@ li.terms-list-item::marker {
 }
 .event-details-actions {
   margin-top: 20px;
-  display: flex;
+  display: grid;
   justify-content: space-between;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   flex-wrap: wrap;
   gap: 20px;
 }
@@ -9438,6 +9443,7 @@ li.terms-list-item::marker {
   justify-content: center;
   align-items: center;
   gap: 10px;
+  /* white-space: nowrap; */
   background-color: var(--color-primary-50);
   border-radius: 8px;
   border: none;
@@ -9466,6 +9472,7 @@ li.terms-list-item::marker {
   font-size: 18px;
   font-weight: 500;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .event-details-description {
@@ -9587,6 +9594,7 @@ li.terms-list-item::marker {
   position: relative;
   margin-top: 100px;
   padding-inline: 24px;
+  overflow-x: clip;
 }
 .event-speakers-section::after {
   content: "";
@@ -9613,7 +9621,7 @@ li.terms-list-item::marker {
   padding: 100px 24px;
 }
 
-.event-speaker-form {
+.event-modal-form {
   max-width: 760px;
   width: 100%;
   padding: 40px;
@@ -9690,9 +9698,7 @@ li.terms-list-item::marker {
     padding: 10px 22px;
     border-radius: 4px;
   }
-  .event-details-actions button span {
-    white-space: nowrap;
-  }
+
   .event-details-actions button::after {
     border-radius: 5px;
   }
@@ -9720,5 +9726,44 @@ li.terms-list-item::marker {
     left: 0;
     width: 100%;
     height: 768px;
+  }
+
+  .modal {
+    padding: 60px 24px;
+  }
+  .modal-content {
+    padding: 0;
+  }
+  .event-modal-form {
+    padding: 20px;
+  }
+  .event-modal-form .form-title {
+    font-size: 20px;
+  }
+
+  .form-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .form-actions .modal-cancel-btn {
+    order: 1;
+  }
+  .form-actions button {
+    height: 40px;
+    font-size: 18px;
+  }
+
+  .input-textarea {
+    min-height: 132px;
+  }
+  .file-input-label img {
+    height: 27px;
+  }
+  .file-dropzone-drop-text {
+    margin-top: 10px;
+  }
+  .upload-btn-wrapper {
+    margin-top: 10px;
   }
 }
