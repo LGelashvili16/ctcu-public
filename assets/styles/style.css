@@ -8172,8 +8172,11 @@ li.terms-list-item::marker {
   color: var(--text-primary-color-50);
 }
 
+.study-abroad-related-section {
+  padding-inline: 24px;
+}
 .study-abroad-related-list {
-  margin-top: 40px;
+  margin-block: 40px 100px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(272px, 411px));
   gap: 39px;
@@ -8254,13 +8257,13 @@ li.terms-list-item::marker {
   opacity: 0;
   transition: opacity 0.2s;
 }
-.study-abroad-card-logo-img:hover {
+/* .study-abroad-card-logo-img:hover {
   width: fit-content;
 }
 .study-abroad-card-logo-img:hover span {
   position: static;
   opacity: 1;
-}
+} */
 
 .study-abroad-card-tag {
   padding: 10px 17px;
@@ -8301,6 +8304,11 @@ li.terms-list-item::marker {
   -webkit-box-orient: vertical;
   text-overflow: ellipsis;
   overflow: hidden;
+}
+.study-abroad-related-title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 900;
 }
 
 @keyframes subtleFlight {
@@ -8354,8 +8362,8 @@ li.terms-list-item::marker {
     opacity: 0.3;
   }
   .study-abroad-program-section .gradient-bg-cyan-2 {
-    top: 600px;
-    left: 180%;
+    top: 0;
+    left: 50%;
     transform: translateX(-50%);
     background: radial-gradient(
       closest-side,
@@ -8365,19 +8373,19 @@ li.terms-list-item::marker {
     z-index: -1;
   }
   .study-abroad-program-section .gradient-bg-pink {
-    top: 1200px;
-    right: -800px;
+            top: 900px;
+        right: -800px;
     z-index: -1;
   }
   .study-abroad-program-section .gradient-bg-red-2 {
-    display: block;
+    display: none;
     height: 1150px;
     top: 2000px;
     left: 70%;
     opacity: 0.3;
   }
   .study-abroad-program-section .gradient-bg-pink-2 {
-    display: block;
+    display: none;
     height: 1100px;
     top: 2300px;
     opacity: 0.3;
@@ -8388,7 +8396,7 @@ li.terms-list-item::marker {
     );
   }
   .study-abroad-program-section .gradient-bg-cyan-3 {
-    display: block;
+    display: none;
     top: 1600px;
     background: radial-gradient(
       closest-side,
@@ -8396,6 +8404,51 @@ li.terms-list-item::marker {
       transparent
     );
     opacity: 0.3;
+  }
+
+  .study-abroad-program-section {
+    padding: 60px 24px;
+  }
+  .study-abroad-program-hero {
+    height: 200px;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .clouds-img {
+    border-radius: 4px;
+  }
+  .plane-img {
+    width: 100%;
+  }
+  .study-abroad-program-hero h1 {
+    font-size: 48px;
+    gap: 29px;
+  }
+  .study-abroad-related-title {
+    font-size: 20px;
+  }
+  .study-abroad-related-list {
+    margin-block: 50px 60px;
+    grid-template-columns: repeat(auto-fit, minmax(272px, 411px));
+    gap: 20px;
+  }
+  .study-abroad-card {
+    width: 100%;
+    padding: 20px;
+  }
+  .study-abroad-card-img {
+    width: 100%;
+  }
+  .study-abroad-card-details {
+    margin-top: 20px;
+  }
+  .study-abroad-card-texts h3 {
+    text-align: center;
+    font-size: 18px;
+  }
+  .study-abroad-card-texts p {
+    text-align: center;
+    font-size: 16px;
   }
 }
 
