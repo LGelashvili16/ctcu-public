@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ctcu - Profile Settings</title>
+
+    <link
+      rel="icon"
+      type="image/png"
+      href="/assets/images/favicon/favicon-16x16.png"
+      sizes="16x16"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/assets/images/favicon/favicon-32x32.png"
+      sizes="32x32"
+    />
+    <link rel="shortcut icon" href="/assets/images/favicon/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      href="/assets/images/favicon/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="/assets/images/favicon/site.webmanifest" />
+
+    <link rel="stylesheet" href="./assets/styles/fonts.css" />
+    <link rel="stylesheet" href="./assets/styles/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./assets/styles/style.css" />
+    <script src="./assets/js/./swiper-bundle.min.js" defer></script>
+    <script src="./assets/js/glightbox.min.js" defer></script>
+    <script src="./assets/js/app.js" defer></script>
+  </head>
+
+  <body data-theme="dark">
+    <div class="whatsapp">
+      <img src="./assets/images/icons/whatsapp.png" alt="whatsapp icon" />
+    </div>
+
+    <header class="header">
+      <div class="header-blur"></div>
+
+      <div class="container header-content">
+        <div class="header-logo">
+          <a href="./index.html">
+            <img src="./assets/images/common/ctc-logo.png" alt="logo" />
+          </a>
+        </div>
+
+        <nav class="header-navigation">
+          <ul>
+            <li>
+              <a href="./courses.html">Courses</a>
+            </li>
+            <li>
+              <a href="./study-abroad.html">Study Abroad</a>
+            </li>
+            <li>
+              <a href="./events.html">Events</a>
+            </li>
+            <li>
+              <a href="./news.html">News</a>
+            </li>
+            <li>
+              <a href="./instructors.html">Instructors</a>
+            </li>
+            <li>
+              <a href="./about.html">About</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="header-cta">
+          <a href="./cart.html" class="header-cart-btn">
+            <img src="./assets/images/icons/Cart.png" alt="cart icon" />
+            <!-- <span>1</span> -->
+          </a>
+
+          <div class="header-profile">
+            <button class="header-profile-btn">
+              <img src="./assets/images/icons/Profile.png" alt="profile" />
+            </button>
+
+            <div class="header-profile-dropdown">
+              <ul class="header-profile-dropdown-list">
+                <li class="header-profile-dropdown-list-item active">
+                  <a href="./profile.html">My Courses</a>
+                </li>
+                <li class="header-profile-dropdown-list-item">
+                  <a href="./profile.html">My Wishlist</a>
+                </li>
+                <li class="header-profile-dropdown-list-item">
+                  <a href="./profile.html">My Events</a>
+                </li>
+                <li class="header-profile-dropdown-list-item">
+                  <a href="./settings.html">Settings</a>
+                </li>
+                <li class="header-profile-dropdown-list-item">
+                  <a href="">Log Out</a>
+                </li>
+
+                <li class="header-profile-dropdown-list-item">
+                  <a href="./sign-in.html">Sign in</a>
+                </li>
+                <li class="header-profile-dropdown-list-item">
+                  <a href="./sign-up.html">Sign up</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="theme-toggle">
+            <label class="toggle-label">
+              <input
+                type="checkbox"
+                id="theme-input"
+                class="toggle-input"
+                checked
+              />
+
+              <div class="theme-toggle-icons">
+                <div class="sun-icons">
+                  <img
+                    src="./assets/images/icons/sun-filled.png"
+                    alt="sun icon"
+                    class="sun-filled-icon"
+                  />
+                  <img
+                    src="./assets/images/icons/sun.png"
+                    alt="sun icon"
+                    class="sun-icon"
+                  />
+                </div>
+
+                <div class="moon-icons">
+                  <img
+                    src="./assets/images/icons/moon-filled.png"
+                    alt="moon icon"
+                    class="moon-filled-icon"
+                  />
+                  <img
+                    src="./assets/images/icons/moon.png"
+                    alt="moon icon"
+                    class="moon-icon"
+                  />
+                </div>
+              </div>
+            </label>
+          </div>
+
+          <div class="menu-button">
+            <div class="menu-button-line"></div>
+            <div class="menu-button-line"></div>
+            <div class="menu-button-line"></div>
+          </div>
+        </div>
+
+        <div class="mobile-menu">
+          <div class="mobile-menu-blur">
+            <div class="mobile-menu-header">
+              <div class="header-logo">
+                <img src="./assets/images/common/ctc-logo.png" alt="logo" />
+              </div>
+
+              <div class="mobile-menu-header-cta">
+                <a href="" class="header-cart-btn">
+                  <img src="./assets/images/icons/Cart.png" alt="cart icon" />
+                  <!-- <span>1</span> -->
+                </a>
+                <button class="mobile-menu-close-btn">
+                  <img src="./assets/images/icons/Cross.png" alt="cross icon" />
+                </button>
+              </div>
+            </div>
+
+            <nav class="header-navigation">
+              <ul class="header-navigation-list">
+                <li>
+                  <div class="mobile-menu-profile-wrapper">
+                    <!-- mobile-menu-profile-title-wrapper ამ კლასს უნდა დაემატოს active რომ გაფერადდეს პროფილის გვერდზე -->
+                    <div class="mobile-menu-profile-title-wrapper">
+                      <p class="mobile-menu-profile-title">My Profile</p>
+
+                      <img
+                        src="./assets/images/icons/chevron-down.png"
+                        alt="chevron"
+                      />
+                    </div>
+
+                    <ul class="mobile-menu-profile-list">
+                      <li>
+                        <a href="./profile.html">My Courses</a>
+                      </li>
+                      <li>
+                        <a href="./profile.html">My Wishlist</a>
+                      </li>
+                      <li>
+                        <a href="./profile.html">My Events</a>
+                      </li>
+                      <li>
+                        <a href="./settings.html">Settings</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+
+                <!-- li-ს უნდა დაემატოს active კლასი, ფერის შესაცვლელად შესაბამის გვერდზე -->
+                <li class="header-navigation-list-item">
+                  <a href="./courses.html">Courses</a>
+                </li>
+                <li class="header-navigation-list-item">
+                  <a href="./study-abroad.html">Study Abroad</a>
+                </li>
+                <li class="header-navigation-list-item">
+                  <a href="./events.html">Events</a>
+                </li>
+                <li class="header-navigation-list-item">
+                  <a href="./news.html">News</a>
+                </li>
+                <li class="header-navigation-list-item">
+                  <a href="./instructors.html">Instructors</a>
+                </li>
+                <li class="header-navigation-list-item">
+                  <a href="./about.html">About</a>
+                </li>
+              </ul>
+            </nav>
+
+            <div class="theme-toggle mobile-theme-toggle">
+              <label class="toggle-label">
+                <input
+                  type="checkbox"
+                  name="theme-btn"
+                  class="toggle-input"
+                  checked
+                />
+                <!-- <span class="toggle-slider"> </span> -->
+
+                <div class="theme-toggle-icons">
+                  <div class="sun-icons">
+                    <img
+                      src="./assets/images/icons/sun-filled.png"
+                      alt="sun icon"
+                      class="sun-filled-icon"
+                    />
+                    <img
+                      src="./assets/images/icons/sun.png"
+                      alt="sun icon"
+                      class="sun-icon"
+                    />
+                  </div>
+
+                  <div class="moon-icons">
+                    <img
+                      src="./assets/images/icons/moon-filled.png"
+                      alt="moon icon"
+                      class="moon-filled-icon"
+                    />
+                    <img
+                      src="./assets/images/icons/moon.png"
+                      alt="moon icon"
+                      class="moon-icon"
+                    />
+                  </div>
+                </div>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="profile-section">
+        <img
+          src="./assets/images/common/background-blur-1.png"
+          alt=""
+          class="hero-background"
+        />
+
+        <div class="container profile-content-wrapper">
+          <aside class="profile-user-card">
+            <button class="edit-profile-btn">
+              <img
+                src="./assets/images/icons/edit-pen.svg"
+                alt="edit pen icon"
+              />
+            </button>
+
+            <div class="profile-user-card-info">
+              <div class="profile-user-avatar">
+                <img
+                  src="./assets/images/common/profile-avatar.png"
+                  alt="profile image"
+                />
+              </div>
+
+              <h3 class="profile-user-name">Name Lastname</h3>
+              <p class="profile-user-email">Mailnamelast@gmail.com</p>
+            </div>
+
+            <div class="profile-navigation">
+              <ul class="profile-navigation-list">
+                <li class="profile-navigation-list-item">
+                  <a href="./profile-courses.html">My Courses</a>
+                </li>
+                <li class="profile-navigation-list-item">
+                  <a href="./profile-wishlist.html">My Wishlist</a>
+                </li>
+                <li class="profile-navigation-list-item">
+                  <a href="./profile-events.html">My Events</a>
+                </li>
+                <li class="profile-navigation-list-item active">
+                  <a href="./profile-settings.html">Settings</a>
+                </li>
+                <li class="profile-navigation-list-item">
+                  <button class="log-out-btn">
+                    <img
+                      src="./assets/images/icons/logout.svg"
+                      alt="logout icon"
+                    />
+                    <span>Log out</span>
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </aside>
+
+          <div class="study-abroad-widget">
+            <div class="study-abroad-icon">
+              <img
+                src="./assets/images/icons/book-plane.svg"
+                alt="book plane icon"
+              />
+            </div>
+
+            <div class="study-abroad-widget-details">
+              <h3>Study Abroad Program Eligible</h3>
+              <p>
+                Transform your future with world-class education opportunities
+              </p>
+
+              <a href="" class="study-abroad-apply-btn gradient-bg">Apply</a>
+              <a href="" class="study-abroad-learn-btn">Learn More</a>
+            </div>
+          </div>
+
+          <div class="profile-content form-default-styles settings-content">
+            <h2>Settings</h2>
+
+            <form class="personal-information-form" novalidate>
+              <div class="accordion-block settings-accordion-block">
+                <div class="accordion">
+                  <div class="accordion-item">
+                    <div class="accordion-button">
+                      <div class="accordion-button-text">
+                        <p>Personal Information</p>
+                      </div>
+
+                      <div class="accordion-chevron">
+                        <img
+                          src="./assets/images/icons/chevron-down-blue.svg"
+                          alt="chevron"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="accordion-content">
+                      <div class="form-groups-wrapper">
+                        <div class="form-groups-flex">
+                          <div class="form-group">
+                            <label for="name">Name</label>
+                            <div class="input-with-icon">
+                              <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                placeholder="Enter your name"
+                                class="input-text"
+                                required
+                              />
+                              <img
+                                src="./assets/images/icons/Info-red.png"
+                                alt="info"
+                                class="info-red"
+                              />
+                            </div>
+                            <p class="form-error-text">
+                              Please enter your name
+                            </p>
+                          </div>
+
+                          <div class="form-group">
+                            <label for="lastname">Lastname</label>
+                            <div class="input-with-icon">
+                              <input
+                                type="text"
+                                id="lastname"
+                                name="lastname"
+                                placeholder="Enter your Lastname"
+                                class="input-text"
+                                required
+                              />
+                              <img
+                                src="./assets/images/icons/Info-red.png"
+                                alt="info"
+                                class="info-red"
+                              />
+                            </div>
+                            <p class="form-error-text">
+                              Please enter your lastname
+                            </p>
+                          </div>
+                        </div>
+
+                        <div class="form-groups-flex">
+                          <div class="form-group">
+                            <label for="email">Email</label>
+                            <div class="input-with-icon">
+                              <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="Enter your email"
+                                class="input-text"
+                                required
+                              />
+                              <img
+                                src="./assets/images/icons/Info-red.png"
+                                alt="info"
+                                class="info-red"
+                              />
+                            </div>
+                            <p class="form-error-text">
+                              Please enter valid email address
+                            </p>
+                          </div>
+
+                          <div class="form-group">
+                            <label for="phone">Phone number</label>
+                            <div class="input-with-icon">
+                              <input
+                                type="tel"
+                                id="phone"
+                                name="phone"
+                                placeholder="+1 000-000-0000"
+                                class="input-text"
+                                required
+                              />
+                              <img
+                                src="./assets/images/icons/Info-red.png"
+                                alt="info"
+                                class="info-red"
+                              />
+                            </div>
+                            <p class="form-error-text">
+                              Please enter valid email address
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion-item">
+                    <div class="accordion-button">
+                      <div class="accordion-button-text">
+                        <p>Change Password</p>
+                      </div>
+
+                      <div class="accordion-chevron">
+                        <img
+                          src="./assets/images/icons/chevron-down-blue.svg"
+                          alt="chevron"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="accordion-content">
+                      <div
+                        class="form-groups-wrapper form-groups-passwords-wrapper"
+                      >
+                        <div class="form-group">
+                          <label for="oldPassword">Old Password</label>
+                          <div class="input-with-icon">
+                            <input
+                              type="oldPassword"
+                              id="oldPassword"
+                              name="oldPassword"
+                              placeholder="Enter old password"
+                              class="input-text"
+                              required=""
+                            />
+                            <img
+                              src="./assets/images/icons/Info-red.png"
+                              alt="info"
+                              class="info-red"
+                            />
+                          </div>
+                          <p class="form-error-text">
+                            (Min 8 symbols, At least 1 uppercase, 1 number)
+                          </p>
+                        </div>
+
+                        <div class="form-group">
+                          <label for="newPassword">New Password</label>
+                          <div class="input-with-icon">
+                            <input
+                              type="password"
+                              id="newPassword"
+                              name="newPassword"
+                              placeholder="Enter new password"
+                              class="input-text"
+                              required=""
+                            />
+                            <img
+                              src="./assets/images/icons/Info-red.png"
+                              alt="info"
+                              class="info-red"
+                            />
+                          </div>
+                          <p class="form-error-text">
+                            (Min 8 symbols, At least 1 uppercase, 1 number)
+                          </p>
+                        </div>
+
+                        <div class="form-group">
+                          <label for="repeatPassword">Repeat Password</label>
+                          <div class="input-with-icon">
+                            <input
+                              type="password"
+                              id="repeatPassword"
+                              name="repeatPassword"
+                              placeholder="Repeat new password"
+                              class="input-text"
+                              required=""
+                            />
+                            <img
+                              src="./assets/images/icons/Info-red.png"
+                              alt="info"
+                              class="info-red"
+                            />
+                          </div>
+                          <p class="form-error-text">
+                            Please repeat your password
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <button class="primary-btn personal-info-form-btn">Save</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-content-wrapper">
+        <div class="footer-content-top">
+          <div class="footer-logo">
+            <img src="./assets/images/common/ctc-logo.png" alt="logo" />
+
+            <p class="footer-description">
+              Lorem ipsum dolor sit amet consectetur. Molestie ipsum in quis ut
+              eu lacus leo volutpat risus. Metus auctor
+            </p>
+
+            <div class="footer-socials">
+              <a href="">
+                <img src="./assets/images/icons/linkedin.png" alt="linkedin" />
+              </a>
+              <a href="">
+                <img src="./assets/images/icons/xcom.png" alt="x.com" />
+              </a>
+              <a href="">
+                <img
+                  src="./assets/images/icons/instagram.png"
+                  alt="instagram"
+                />
+              </a>
+              <a href="">
+                <img src="./assets/images/icons/facebook.png" alt="facebook" />
+              </a>
+            </div>
+          </div>
+
+          <div class="footer-course-categories footer-nav">
+            <div class="footer-course-categories-heading footer-dropdown">
+              <h3>Course Categories</h3>
+
+              <img src="./assets/images/icons/chevron-down.png" alt="chevron" />
+            </div>
+
+            <ul class="footer-links-list footer-dropdown-content">
+              <li><a href="">Business</a></li>
+              <li><a href="">Digital Marketing</a></li>
+              <li><a href="">Web Development</a></li>
+              <li><a href="">Cloud Computing</a></li>
+              <li><a href="">Artificial Intelligence</a></li>
+              <li><a href="">Cybersecurity</a></li>
+            </ul>
+          </div>
+
+          <div class="discover-more-links footer-nav">
+            <div class="footer-discover-heading footer-dropdown">
+              <h3>Discover</h3>
+
+              <img src="./assets/images/icons/chevron-down.png" alt="chevron" />
+            </div>
+
+            <div class="footer-discover-links-wrapper footer-dropdown-content">
+              <ul class="footer-links-list">
+                <li><a href="./study-abroad.html">Study Abroad</a></li>
+                <li><a href="./courses.html">Courses</a></li>
+                <li><a href="./events.html">Events</a></li>
+                <li><a href="./news.html">News</a></li>
+                <li><a href="">Support</a></li>
+                <li><a href="./about.html">About</a></li>
+              </ul>
+              <ul class="footer-links-list">
+                <li><a href="./instructors.html">Instructors</a></li>
+                <li><a href="./partners.html">Partners</a></li>
+                <li><a href="./sign-up.html">Sign up</a></li>
+                <li><a href="./sign-in.html">Log in</a></li>
+                <li><a href="./cart.html">Cart</a></li>
+                <li><a href="./profile.html">Wishlist</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="footer-support">
+            <div class="footer-support-content">
+              <h3>Support</h3>
+              <p>You can text us via Whatsapp chat or visit</p>
+              <a href="./contact.html">Help Center</a>
+            </div>
+
+            <div class="theme-toggle">
+              <label class="toggle-label">
+                <input type="checkbox" class="toggle-input" checked />
+                <!-- <span class="toggle-slider"> </span> -->
+
+                <div class="theme-toggle-icons">
+                  <div class="sun-icons">
+                    <img
+                      src="./assets/images/icons/sun-filled.png"
+                      alt="sun icon"
+                      class="sun-filled-icon"
+                    />
+                    <img
+                      src="./assets/images/icons/sun.png"
+                      alt="sun icon"
+                      class="sun-icon"
+                    />
+                  </div>
+
+                  <div class="moon-icons">
+                    <img
+                      src="./assets/images/icons/moon-filled.png"
+                      alt="moon icon"
+                      class="moon-filled-icon"
+                    />
+                    <img
+                      src="./assets/images/icons/moon.png"
+                      alt="moon icon"
+                      class="moon-icon"
+                    />
+                  </div>
+                </div>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-content-bottom">
+          <p class="footer-copyright">
+            <span>2025</span> CTC. All rights reserved.
+          </p>
+
+          <div class="footer-bottom-links">
+            <a href="">Privacy Policy</a>
+            <a href="./terms.html">Terms and Conditions</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

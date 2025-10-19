@@ -5460,7 +5460,7 @@ li.terms-list-item::marker {
 .accordion-block .accordion-content {
   height: 0;
   overflow: hidden;
-  transition: height 0.3s ease-in-out;
+  transition: height 0.3s cubic-bezier(0.65, 0, 0.35, 1);
 }
 .accordion-content-texts {
   padding: 24px;
@@ -10827,6 +10827,79 @@ li.terms-list-item::marker {
 }
 .my-events-content .event-card-img {
   width: 100%;
+}
+
+.settings-content {
+  max-width: none;
+  width: 100%;
+  padding: 40px;
+}
+
+..personal-information-form {
+  display: grid;
+}
+.settings-accordion-block {
+  margin-top: 0;
+}
+
+.settings-accordion-block .accordion {
+  margin-top: 40px;
+  gap: 40px;
+}
+
+.settings-accordion-block .form-groups-wrapper {
+  margin-top: 20px;
+}
+
+.settings-accordion-block .accordion-item {
+  background: none;
+  box-shadow: none;
+  border-radius: 0px;
+}
+.settings-accordion-block .accordion-button {
+  padding: 0;
+  gap: 20px;
+  cursor: pointer;
+  height: auto;
+  border-radius: 0px;
+}
+.settings-accordion-block .accordion-button::before {
+  display: none;
+}
+.settings-accordion-block .accordion-button::after {
+  display: none;
+}
+
+.settings-accordion-block .accordion-button-text {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--color-primary-90);
+}
+.settings-accordion-block .accordion-chevron {
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--color-primary);
+  background-color: var(--bg-primary-color-30);
+}
+.form-groups-passwords-wrapper {
+  max-width: 436px;
+}
+.settings-accordion-block .form-groups-flex {
+  gap: 20px;
+}
+
+.personal-info-form-btn {
+  justify-self: end;
+  margin-top: 40px;
+  max-width: 276px;
+  width: 100%;
+  height: 56px;
+  border: none;
+  border-radius: 8px;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-primary-color-80);
+  cursor: pointer;
 }
 
 @media (max-width: 1024px) {
