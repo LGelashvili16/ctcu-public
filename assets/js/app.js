@@ -695,3 +695,18 @@ const handleFileSelectAndDrop = () => {
   });
 };
 handleFileSelectAndDrop();
+
+// !Profile Page
+const handleEventRemove = () => {
+  const eventRemoveBtns = document.querySelectorAll(".event-card-remove-btn");
+
+  if (eventRemoveBtns.length) {
+    eventRemoveBtns.forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        const eventId = btn.dataset.eventId;
+      });
+    });
+  }
+};
+handleEventRemove();

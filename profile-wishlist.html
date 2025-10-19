@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ctcu - Profile Courses</title>
+    <title>Ctcu - Profile Wishlist</title>
 
     <link
       rel="icon"
@@ -301,10 +301,10 @@
 
             <div class="profile-navigation">
               <ul class="profile-navigation-list">
-                <li class="profile-navigation-list-item active">
+                <li class="profile-navigation-list-item">
                   <a href="./profile-courses.html">My Courses</a>
                 </li>
-                <li class="profile-navigation-list-item">
+                <li class="profile-navigation-list-item active">
                   <a href="./profile-wishlist.html">My Wishlist</a>
                 </li>
                 <li class="profile-navigation-list-item">
@@ -345,8 +345,8 @@
             </div>
           </div>
 
-          <div class="profile-content my-courses-content">
-            <h2>My Learning</h2>
+          <div class="profile-content">
+            <h2>My Wishlist</h2>
 
             <div class="courses-page-list">
               <div class="courses-page-list-item">
@@ -397,15 +397,17 @@
                       ISO/IEC 27001 Lead Auditor in DUBAI
                     </h3>
                     <p class="course-description">
-                      Lorem ipsum dolor sit amet consectetur. Egestas aliquet
-                      feugiat mauris ipsum amet est adipiscing. Gravida morbi
-                      sed est morbi blandit. Nam turpis tempor quis ante
-                      venenatis.
+                      Developing and improving an Information Security
+                      Management System (ISMS), enabling you to ensure...
                     </p>
 
                     <div class="course-actions-wrapper">
                       <div class="course-price-and-date">
-                        <p class="course-status upcoming-status">Upcoming</p>
+                        <div class="course-price">
+                          <p class="course-current-price">$35,99</p>
+                          <p class="course-old-price">$55,99</p>
+                          <p class="course-sale">40% off</p>
+                        </div>
 
                         <div class="course-dates">
                           <span>Start Date</span>
@@ -417,12 +419,20 @@
                 </a>
 
                 <div class="course-actions">
-                  <a href="./syllabus-inner.html" class="primary-btn"
-                    >View Syllabus</a
-                  >
-                  <a href="./course-inner.html" class="outline-btn">
-                    View Course
-                  </a>
+                  <button class="add-to-cart primary-btn">Add to cart</button>
+                  <button class="add-to-favorites-btn active">
+                    <img
+                      src="./assets/images/icons/heart.svg"
+                      alt="heart icon"
+                      class="heart-outline"
+                    />
+
+                    <img
+                      src="./assets/images/icons/heart-dark.svg"
+                      alt="heart icon"
+                      class="heart-dark"
+                    />
+                  </button>
                 </div>
               </div>
 
@@ -474,15 +484,17 @@
                       ISO/IEC 27001 Lead Auditor in DUBAI
                     </h3>
                     <p class="course-description">
-                      Lorem ipsum dolor sit amet consectetur. Egestas aliquet
-                      feugiat mauris ipsum amet est adipiscing. Gravida morbi
-                      sed est morbi blandit. Nam turpis tempor quis ante
-                      venenatis.
+                      Developing and improving an Information Security
+                      Management System (ISMS), enabling you to ensure...
                     </p>
 
                     <div class="course-actions-wrapper">
                       <div class="course-price-and-date">
-                        <p class="course-status ongoing-status">Ongoing</p>
+                        <div class="course-price">
+                          <p class="course-current-price">$35,99</p>
+                          <p class="course-old-price">$55,99</p>
+                          <p class="course-sale">40% off</p>
+                        </div>
 
                         <div class="course-dates">
                           <span>Start Date</span>
@@ -494,171 +506,25 @@
                 </a>
 
                 <div class="course-actions">
-                  <a href="./syllabus-inner.html" class="primary-btn"
-                    >View Syllabus</a
-                  >
-                  <a href="./course-inner.html" class="outline-btn">
-                    View Course
-                  </a>
-                </div>
-              </div>
-
-              <div class="courses-page-list-item">
-                <a href="./course-inner.html">
-                  <div class="courses-list-item-img">
+                  <button class="add-to-cart primary-btn">Add to cart</button>
+                  <button class="add-to-favorites-btn active">
                     <img
-                      src="https://images.unsplash.com/photo-1757285398769-31a5021afdcd?w=500&amp;auto=format&amp;fit=crop&amp;q=60&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw0fHx8ZW58MHx8fHx8"
-                      alt=""
+                      src="./assets/images/icons/heart.svg"
+                      alt="heart icon"
+                      class="heart-outline"
                     />
 
-                    <div class="course-list-item-logos">
-                      <div class="course-list-item-logo-img">
-                        <img
-                          src="./assets/images/logos/logo-1.png"
-                          alt="logo"
-                        />
-                      </div>
-                      <div class="course-list-item-logo-img">
-                        <img
-                          src="./assets/images/logos/logo-2.png"
-                          alt="logo"
-                        />
-                      </div>
-                    </div>
-
-                    <div class="course-list-item-info">
-                      <div class="course-info-wrapper">
-                        <div class="course-info-lessons">
-                          <img
-                            src="./assets/images/icons/book.png"
-                            alt="book icon"
-                          />
-                          <span>12 Lessons</span>
-                        </div>
-                        <div class="course-info-hours">
-                          <img
-                            src="./assets/images/icons/clock.png"
-                            alt="clock icon"
-                          />
-                          <span>95 Hours</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="courses-details">
-                    <h3 class="course-title">
-                      ISO/IEC 27001 Lead Auditor in DUBAI
-                    </h3>
-                    <p class="course-description">
-                      Lorem ipsum dolor sit amet consectetur. Egestas aliquet
-                      feugiat mauris ipsum amet est adipiscing. Gravida morbi
-                      sed est morbi blandit. Nam turpis tempor quis ante
-                      venenatis.
-                    </p>
-
-                    <div class="course-actions-wrapper">
-                      <div class="course-price-and-date">
-                        <p class="course-status completed-status">Completed</p>
-
-                        <div class="course-dates">
-                          <span>Start Date</span>
-                          <span>Nov 01, 2025</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-
-                <div class="course-actions">
-                  <a href="./syllabus-inner.html" class="primary-btn"
-                    >View Syllabus</a
-                  >
-                  <a href="./course-inner.html" class="outline-btn">
-                    View Course
-                  </a>
-                </div>
-              </div>
-
-              <div class="courses-page-list-item">
-                <a href="./course-inner.html">
-                  <div class="courses-list-item-img">
                     <img
-                      src="https://images.unsplash.com/photo-1757285398769-31a5021afdcd?w=500&amp;auto=format&amp;fit=crop&amp;q=60&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw0fHx8ZW58MHx8fHx8"
-                      alt=""
+                      src="./assets/images/icons/heart-dark.svg"
+                      alt="heart icon"
+                      class="heart-dark"
                     />
-
-                    <div class="course-list-item-logos">
-                      <div class="course-list-item-logo-img">
-                        <img
-                          src="./assets/images/logos/logo-1.png"
-                          alt="logo"
-                        />
-                      </div>
-                      <div class="course-list-item-logo-img">
-                        <img
-                          src="./assets/images/logos/logo-2.png"
-                          alt="logo"
-                        />
-                      </div>
-                    </div>
-
-                    <div class="course-list-item-info">
-                      <div class="course-info-wrapper">
-                        <div class="course-info-lessons">
-                          <img
-                            src="./assets/images/icons/book.png"
-                            alt="book icon"
-                          />
-                          <span>12 Lessons</span>
-                        </div>
-                        <div class="course-info-hours">
-                          <img
-                            src="./assets/images/icons/clock.png"
-                            alt="clock icon"
-                          />
-                          <span>95 Hours</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="courses-details">
-                    <h3 class="course-title">
-                      ISO/IEC 27001 Lead Auditor in DUBAI
-                    </h3>
-                    <p class="course-description">
-                      Lorem ipsum dolor sit amet consectetur. Egestas aliquet
-                      feugiat mauris ipsum amet est adipiscing. Gravida morbi
-                      sed est morbi blandit. Nam turpis tempor quis ante
-                      venenatis.
-                    </p>
-
-                    <div class="course-actions-wrapper">
-                      <div class="course-price-and-date">
-                        <p class="course-status completed-status">Completed</p>
-
-                        <div class="course-dates">
-                          <span>Start Date</span>
-                          <span>Nov 01, 2025</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-
-                <div class="course-actions">
-                  <a href="./syllabus-inner.html" class="primary-btn"
-                    >View Syllabus</a
-                  >
-                  <a href="./course-inner.html" class="outline-btn">
-                    View Course
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>
 
-            <div class="courses-page-pagination">
+            <!-- <div class="courses-page-pagination">
               <div class="container pagination">
                 <button class="pagination-btn-previous">
                   <img
@@ -680,7 +546,7 @@
                   />
                 </button>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
       </section>
