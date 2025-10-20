@@ -20,9 +20,10 @@ const handleAllSwiperInit = () => {
     },
     coursesSwiper: {
       // grabCursor: true,
-      // initialSlide: 2,
+      initialSlide: 2,
       slidesPerView: "auto",
       spaceBetween: 24,
+      // cssMode: true,
       watchSlidesProgress: true,
       centeredSlides: true,
       slideToClickedSlide: true,
@@ -46,28 +47,24 @@ const handleAllSwiperInit = () => {
       },
       on: {
         init: (swiper) => {
-          swiper.wrapperEl.style.width = `${swiper.wrapperEl.scrollWidth}px`;
-
-          const slideWidth = swiper.slides[0].offsetWidth;
-          // if (window.innerWidth >= 1024) {
-          //   // swiper.wrapperEl.style.marginLeft = `${slideWidth * 3}`;
-
-          //   swiper.wrapperEl.style.marginLeft = "20px";
-          //   if (swiper.activeIndex > 1) {
-          //     swiper.wrapperEl.style.marginLeft = "62px";
-          //   }
-          // }
+          // swiper.wrapperEl.style.marginLeft = "-6px";
         },
         slideChange: (swiper) => {
-          // swiper.wrapperEl.style.width = `${swiper.wrapperEl.scrollWidth}px`;
-
           if (window.innerWidth >= 1024) {
-            swiper.wrapperEl.style.marginLeft = "20px";
-            if (swiper.activeIndex > 1) {
-              swiper.wrapperEl.style.marginLeft = "62px";
+            if (swiper.activeIndex > 3) {
+              swiper.wrapperEl.style.marginLeft = "150px";
+            }
+            if (swiper.activeIndex === 3) {
+              swiper.wrapperEl.style.marginLeft = "106px";
+            }
+            if (swiper.activeIndex === 2) {
+              swiper.wrapperEl.style.marginLeft = "-6px";
+            }
+            if (swiper.activeIndex === 1) {
+              swiper.wrapperEl.style.marginLeft = "-114px";
             }
             if (swiper.activeIndex === 0) {
-              swiper.wrapperEl.style.marginLeft = "0";
+              swiper.wrapperEl.style.marginLeft = "-66px";
             }
           } else {
             swiper.wrapperEl.style.marginLeft = "0";

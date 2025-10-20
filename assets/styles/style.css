@@ -5260,6 +5260,7 @@ li.terms-list-item::marker {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  justify-content: space-between;
   gap: 10px;
 }
 .course-information-list-item h4 {
@@ -5267,13 +5268,69 @@ li.terms-list-item::marker {
   font-size: 16px;
   line-height: 16px;
 }
+/* .course-info-item-desc {
+  position: relative;
+  width: 100%;
+} */
+/* .course-info-item-desc::before {
+  content: "";
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, transform 0.3s;
+
+  position: absolute;
+  left: 50%;
+  top: -2px;
+  transform: translateX(-50%);
+
+  border-width: 6px;
+  border-style: solid;
+  border-color: #454545 transparent transparent transparent;
+  z-index: 10;
+} */
+/* .course-info-item-desc::after {
+  content: attr(data-tooltip);
+
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, transform 0.3s;
+
+
+  position: absolute;
+  left: 50%;
+  top: calc(-100% - 12px); 
+  transform: translateX(-50%) translateY(5px); 
+
+  background-color: #454545;
+  color: #fff;
+  text-align: center;
+  padding: 8px 12px;
+  border-radius: 4px;
+  white-space: nowrap;
+  font-size: 14px;
+  z-index: 10;
+} */
+/* .course-info-item-desc:hover::after,
+.course-info-item-desc:hover::before {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+} */
+
 .course-information-list-item p {
+  position: relative;
   font-size: 14px;
   line-height: 24px;
   color: var(--text-blue-550);
+  width: 100%;
   white-space: nowrap;
-}
+  overflow: hidden;
+  text-overflow: ellipsis;
 
+  /* display: -webkit-box; */
+  /* -webkit-line-clamp: 1; */
+  /* -webkit-box-orient: vertical; */
+}
 .course-page-description {
   position: relative;
   margin-top: 40px;
