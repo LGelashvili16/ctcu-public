@@ -1,3 +1,33 @@
+// !Toast
+async function showToast(message, type = "default", duration = 3000) {
+  const toast = document.querySelector(".toast");
+  if (!toast) return;
+  if (toast.classList.contains("show")) {
+    toast.classList.remove("show");
+  }
+
+  const toastText = toast.querySelector(".toast-text");
+  toastText.textContent = message;
+  toast.className = `toast show ${type}`;
+
+  const toastCloseBtn = toast.querySelector(".toast-close-btn");
+  toastCloseBtn.addEventListener("click", () => {
+    toast.classList.remove("show");
+  });
+
+  if (duration !== -1) {
+    setTimeout(() => {
+      toast.classList.remove("show");
+    }, duration);
+  }
+}
+showToast("Welcome to CTcu!", "default", -1);
+
+setTimeout(() => {
+  showToast("Welcome to CTcu!222", "default", -1);
+  showToast("Welcome to CTcu!22232", "default", -1);
+}, 2000);
+
 // !Swiper inits
 const handleAllSwiperInit = () => {
   const swiperConfigs = {
@@ -134,7 +164,6 @@ const handleAllSwiperInit = () => {
       breakpoints: {
         768: {
           direction: "vertical",
-
           // scrollbar: {
           //   dragSize: 148,
           // },
@@ -522,16 +551,25 @@ const handleAgendaTabs = () => {
 };
 handleAgendaTabs();
 
+const iconUrl = "../images/icons/toast-default.svg";
+
 // Toastify({
-//   text: "This is a toast",
-//   duration: 3000,
-//   className: "toast-default",
+//   text: `
+//     <img src="${iconUrl}" class="toast-icon-custom" alt="Custom Icon">
+//     &nbsp;
+//     Your Custom Icon Message Here!
+//   `,
+//   duration: -1,
+//   className: "hiih",
 //   // destination: "https://github.com/apvarun/toastify-js",
 //   // newWindow: true,
 //   close: true,
 //   gravity: "top", // `top` or `bottom`
 //   position: "center", // `left`, `center` or `right`
 //   stopOnFocus: true, // Prevents dismissing of toast on hover
+//   offset: {
+//     y: 50,
+//   },
 //   onClick: function () {}, // Callback after click
 // }).showToast();
 
